@@ -1,32 +1,72 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <router-view />
     </div>
-    <router-view/>
-  </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+    margin: 0;
 }
-
-#nav {
-  padding: 30px;
+.light-blue {
+    color: #f6faff;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.cream {
+    color: #fffbf1;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.deep-blue {
+    color: #360efc;
+}
+.yellow {
+    color: #f9bc0a;
+}
+.light-blue-bg {
+    background: #f6faff;
+}
+.cream-bg {
+    background: #fffbf1;
+}
+.deep-blue-bg {
+    background: #360efc;
+}
+.yellow-bg {
+    background: #f9bc0a;
+}
+.small-text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.4px;
+}
+.heading {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 55px;
+    letter-spacing: 1px;
+    color: #000000;
+}
+.small-heading {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 1px;
+    color: #37383c;
+}
+.body-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: #817f7f;
+}
+.font {
+    font-family: 'Ubuntu', sans-serif;
+}
+button {
+    outline: none;
 }
 </style>
