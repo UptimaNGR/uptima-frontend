@@ -1,4 +1,4 @@
-# uptima_frontend
+# uptima_frontend [![Reviewed by Hound](https://img.shields.io/badge/ESLint%20Reviewed%20by%20-HoundCI-d16ef5)](https://houndci.com) [![CircleCI](https://circleci.com/gh/UptimaNGR/uptima-frontend.svg?style=svg)](https://app.circleci.com/pipelines/github/UptimaNGR/uptima-frontend)
 
 ## Project setup
 ```
