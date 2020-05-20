@@ -3,10 +3,10 @@
         <div class="sec1">
             <div class="links">
                 <ul>
-                    <li>HOME</li>
-                    <li>CONTACT US</li>
-                    <li>ABOUT</li>
-                    <li>SOLUTIONS</li>
+                    <li><router-link to="/">HOME</router-link></li>
+                    <li><router-link to="/contact-us">CONTACT US</router-link></li>
+                    <li><router-link to="/">ABOUT </router-link></li>
+                    <li><router-link to="/">SOLUTIONS </router-link></li>
                 </ul>
             </div>
             <hr />
@@ -60,7 +60,8 @@ export default {};
     display: flex;
     justify-content: space-around;
 }
-.links ul > li {
+.links ul > li,
+.links ul > li > a {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -94,5 +95,23 @@ hr {
 .scroll > svg {
     align-self: center;
     margin-right: 50px;
+}
+@media screen and (max-width: 768px) {
+    .links,
+    .address {
+        max-width: none;
+    }
+    .address ul {
+        display: block;
+        text-align: center;
+        margin: 0;
+    }
+    .address ul > li {
+        margin-bottom: 10px;
+    }
+    .scroll > svg[data-v-40ab164b] {
+        align-self: center;
+        margin-right: 20px;
+    }
 }
 </style>
