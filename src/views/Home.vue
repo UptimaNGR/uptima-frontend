@@ -66,38 +66,39 @@
                         />
                     </svg></button
             ></router-link>
-            <h3 class="offer">WHAT WE OFFER</h3>
+            <h3 class="offer">WHAT OUR SOLUTIONS OFFER</h3>
             <div class="reason-gra">
                 <div class="light-blue-bg bg">
                     <img src="../assets/images/svg/oil.svg" alt="oil" />
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,e sed do eiusmod
-                        tempor isunt ut labore t d tempor incididunt ut labore et dolore magna
-                        aliqua
+                        With real-time visualization of the litres of fuel sold at each station on
+                        our clients’ dashboard, we provide automated visibility of the expected cash
+                        inflow thereby preventing possible cash losses due to premeditated and
+                        inadvertent actions.
                     </p>
                 </div>
                 <div class="light-blue-bg bg">
                     <img src="../assets/images/svg/connect.svg" alt="connect" />
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,e sed do eiusmod
-                        tempor isunt ut labore t d tempor incididunt ut labore et dolore magna
-                        aliqua
+                        With our solution’s real time stock monitoring and forecasting, we help our
+                        clients automate purchase planning and eliminate the risk of extreme
+                        shortages in fuel levels during peak hours.
                     </p>
                 </div>
                 <div class="light-blue-bg bg">
                     <img src="../assets/images/svg/screen.svg" alt="screen" />
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,e sed do eiusmod
-                        tempor isunt ut labore t d tempor incididunt ut labore et dolore magna
-                        aliqua
+                        Our Telemetry cloud solution helps in reducing our clients’ logistics costs
+                        by at least 20% by providing order dates prediction, tank level consumption
+                        to the logistics department so as to optimize delivery schedules.
                     </p>
                 </div>
                 <div class="light-blue-bg bg">
                     <img src="../assets/images/svg/charge.svg" alt="charge" />
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,e sed do eiusmod
-                        tempor isunt ut labore t d tempor incididunt ut labore et dolore magna
-                        aliqua
+                        Via our client’s personalized dashboards, various departments such as the
+                        accounting department can easily see the exact fuel inventory at any time,
+                        on any day, with just 1 click, thereby improving budgeting planning.
                     </p>
                 </div>
             </div>
@@ -112,13 +113,16 @@
         <div class="help">
             <div class="help-text">
                 <h5>IT’S YOUR COMPANY. WE ARE HERE TO HELP</h5>
-                <p>We want to help you take control of things and always be in the loop as to</p>
+                <p>
+                    We want to help you take control of things and <br />always be on top of your
+                    operations wherever you are.
+                </p>
             </div>
             <div class="help-image">
                 <img src="../assets/images/png/stack.png" alt="stack" />
                 <div class="light-blue-bg">
                     <div class="grow">
-                        <h3>WE HELP YOUR BUSINESS GROW</h3>
+                        <h3>WE HELP YOUR BUSINESS REALIZE ITS FULL POTENTIAL</h3>
                         <p>
                             Through detailed information and sufficient data, we want to make it
                             easy for you to manage your fuel levels and make informed decisions on
@@ -232,6 +236,12 @@ export default {
     margin-top: 30px;
     cursor: pointer;
 }
+.btn1:hover {
+    color: #f9bc0a;
+    background: #ffffff;
+    border: 2px solid #f9bc0a;
+    transition: all ease-in-out 500ms;
+}
 .btn2 {
     font-style: normal;
     font-weight: 500;
@@ -243,6 +253,12 @@ export default {
     color: #ffffff;
     border: 2px solid #360efc;
     cursor: pointer;
+}
+.btn2:hover {
+    color: #360efc;
+    background: #ffffff;
+    border: 2px solid #360efc;
+    transition: all ease-in-out 500ms;
 }
 .about {
     padding: 50px 100px;
@@ -256,6 +272,7 @@ export default {
     text-align: center;
     letter-spacing: 1px;
     color: #817f7f;
+    margin: 0;
 }
 .about p {
     font-style: normal;
@@ -285,6 +302,11 @@ export default {
     cursor: pointer;
     background: transparent;
 }
+.reason button:hover {
+    color: #ffffff;
+    background: #1c17ff;
+    transition: all ease-in-out 500ms;
+}
 .reason svg {
     margin-left: 30px;
 }
@@ -305,7 +327,6 @@ export default {
     margin-top: 70px;
 }
 .bg {
-    max-width: 222px;
     padding: 50px;
 }
 .bg p {
@@ -343,6 +364,7 @@ export default {
     text-align: center;
     letter-spacing: 1px;
     color: #000000;
+    margin-bottom: 20px;
 }
 .help-image {
     display: flex;
@@ -358,9 +380,10 @@ export default {
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    line-height: 75px;
+    line-height: 45px;
     letter-spacing: 1px;
     color: #817f7f;
+    margin-bottom: 30px;
 }
 .grow p {
     font-style: normal;
@@ -393,6 +416,11 @@ export default {
     text-align: center;
     letter-spacing: 1px;
     color: #817f7f;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.filling img {
+    width: 100%;
 }
 .form {
     display: flex;
@@ -450,6 +478,11 @@ export default {
     padding: 15px 25px;
     background: transparent;
 }
+.newsletter button:hover {
+    color: #ffffff;
+    background: #1c17ff;
+    transition: all ease-in-out 500ms;
+}
 .solutions button > svg {
     margin-left: 20px;
 }
@@ -461,6 +494,9 @@ export default {
         padding: 10px;
         margin-top: 20px;
     }
+    .container h3 {
+        font-size: 35px;
+    }
     .about {
         padding: 20px;
     }
@@ -469,6 +505,11 @@ export default {
     }
     .sponsor img {
         margin-bottom: 20px;
+        width: 100%;
+    }
+    .offer {
+        margin: 20px 0;
+        font-size: 20px;
     }
     .reason {
         padding: 10px;
@@ -489,6 +530,12 @@ export default {
     .help-image img {
         width: 100%;
     }
+    .help-text h5 {
+        line-height: 35px;
+    }
+    .help-text p {
+        font-size: 15px;
+    }
     .grow {
         padding: 20px;
     }
@@ -499,6 +546,7 @@ export default {
     .grow p {
         text-align: center;
         margin-bottom: 50px;
+        font-size: 15px;
     }
     .filling h3 {
         font-size: 20px;
@@ -514,6 +562,11 @@ export default {
     }
     .form {
         display: block;
+        text-align: center;
+    }
+    .form input {
+        width: fit-content;
+        margin-bottom: 20px;
     }
     .newsletter button {
         display: block;
