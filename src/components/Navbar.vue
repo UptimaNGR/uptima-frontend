@@ -107,6 +107,7 @@ li {
 }
 .link li a:hover {
     border-bottom: 4px solid #ffffff;
+    transition: all ease-in-out 200ms;
 }
 .link > li > .router-link-exact-active {
     border-bottom: 4px solid #ffffff;
@@ -131,6 +132,12 @@ button {
     box-sizing: border-box;
     border-radius: 5px;
 }
+.login:hover {
+    color: #ffffff;
+    background: #f9bc0a;
+    border: 2px solid #ffffff;
+    transition: all ease-in-out 500ms;
+}
 .try {
     padding: 10px 20px;
     border-radius: 5px;
@@ -141,6 +148,12 @@ button {
     letter-spacing: -0.4px;
     color: #ffffff;
     border: 1px solid #360efc;
+}
+.try:hover {
+    color: #360efc;
+    background: #ffffff;
+    border: 1px solid #b16b6b;
+    transition: all ease-in-out 500ms;
 }
 .nav__mobile {
     display: block;
@@ -197,7 +210,7 @@ button {
     .navbar__button__mobile > span {
         display: block;
         position: absolute;
-        height: 6px;
+        height: 2px;
         width: 100%;
         background: white;
         border-radius: 9px;
