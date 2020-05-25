@@ -72,4 +72,14 @@ a {
 button {
     outline: none;
 }
+.vue-form-wizard .wizard-header {
+    display: none;
+}
+.vue-form-wizard .wizard-icon-circle .wizard-icon-container {
+    background: #ffffff;
+    border: none;
+}
+.wizard-card-footer {
+    margin-top: 75px;
+}
 </style>

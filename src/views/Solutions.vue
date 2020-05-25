@@ -33,12 +33,13 @@
         <div class="section-2">
             <div class="text-container">
                 <p class="deep-blue">01</p>
-                <p class="deep-blue">MAKE ACCURATE FORCASTS</p>
-                <h3 class="small-heading">Understand the actions to take at specific times</h3>
+                <p class="deep-blue">MEASILY ACCESSIBLE DATA</p>
+                <h4 class="small-heading">Understand the actions to take at specific times</h4>
                 <p class="body-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip
+                    Our solution transmits actionable data real time from tanks and tankers to the
+                    cloud. This data can easily be shared via the internet amidst departments.
+                    Accounting department for instance can easily see the exact fuel inventory at
+                    any time, on any day which can then be exported into their accounting software.
                 </p>
             </div>
             <div>
@@ -51,24 +52,25 @@
             </div>
             <div class="text-container">
                 <p class="deep-blue">02</p>
-                <p class="deep-blue">MAKE ACCURATE FORCASTS</p>
-                <h3 class="small-heading">Understand the actions to take at specific times</h3>
+                <p class="deep-blue">REAL TIME OVERVIEW OF OPERATIONS</p>
+                <h4>stand the actions to take at specific times</h4>
                 <p class="body-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip
+                    Managers at filling stations are provided a hawk-eyed view of operations from
+                    anywhere they are, thereby easily spotting red flags and preventing possible
+                    cash losses.
                 </p>
             </div>
         </div>
         <div class="section-2">
             <div class="text-container">
                 <p class="deep-blue">03</p>
-                <p class="deep-blue">MAKE ACCURATE FORCASTS</p>
-                <h3 class="small-heading">Understand the actions to take at specific times</h3>
+                <p class="deep-blue">REDUCTION OF LOGISTIC COSTS</p>
+                <h4 class="small-heading">Understand the actions to take at specific times</h4>
                 <p class="body-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip
+                    Our clients logistic departments use the data provided by Uptima's solutions
+                    (predicted order date, tank level consumption and interactive maps) to optimise
+                    fuel delivery routes, thereby reducing the number of deliveries to each tank by
+                    over 20%, hence saving costs.
                 </p>
             </div>
             <div>
@@ -99,47 +101,48 @@
             </div>
         </div>
         <div class="reason">
-            <h3 class="heading">WHY CHOOSE NOVUS</h3>
+            <h3 class="heading">WHY CHOOSE UPTIMA</h3>
             <div class="reason-gra">
                 <div class="light-blue-bg bg">
                     <img src="../assets/images/svg/oil.svg" alt="oil" />
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,e sed do eiusmod
-                        tempor isunt ut labore t d tempor incididunt ut labore et dolore magna
-                        aliqua
+                        Our solutions are cloud based hence clients data can easily be accessed via
+                        the internet, remotely providing our customers faster communication within
+                        the company's hierarchical system, increased transparency and better
+                        operational efficiencies
                     </p>
                 </div>
                 <div class="light-blue-bg bg">
                     <img src="../assets/images/svg/connect.svg" alt="connect" />
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,e sed do eiusmod
-                        tempor isunt ut labore t d tempor incididunt ut labore et dolore magna
-                        aliqua
+                        With our on-demand subscription based pricing structure, Uptima offers its
+                        clients increased flexibility. Clients can easily choose a monthly payment
+                        plan and this affords our clients the ability to easily stop and start as
+                        the need arises without worrying much about sunk cost.
                     </p>
                 </div>
                 <div class="light-blue-bg bg">
                     <img src="../assets/images/svg/screen.svg" alt="screen" />
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,e sed do eiusmod
-                        tempor isunt ut labore t d tempor incididunt ut labore et dolore magna
-                        aliqua
+                        Uptima works with most major oil and gas companies who use our solutions to
+                        optimize their logistics and offer a better service to their customers.
                     </p>
                 </div>
                 <div class="light-blue-bg bg">
                     <img src="../assets/images/svg/charge.svg" alt="charge" />
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,e sed do eiusmod
-                        tempor isunt ut labore t d tempor incididunt ut labore et dolore magna
-                        aliqua
+                        We pride ourselves in reducing the harm caused to the environment as our
+                        solutions help reduce CO2 Emissions by several tons daily. This is by our
+                        ability to help our clients based on live data to plan effectively and
+                        optimise their lo
                     </p>
                 </div>
             </div>
         </div>
         <div class="get-started">
-            <h1 class="heading">READY TO LOREM IPSUM</h1>
+            <h1 class="heading">TAKE CHARGE OF YOUR FUEL LEVELS AND SAVE</h1>
             <p>
-                Be in the know lorem ipsum when you dolor <br />
-                ipsum dolor lorem
+                Get the Insurance you need for your tanks to never run dry.
             </p>
             <router-link to="#"><button class="deep-blue-bg">Get Started</button></router-link>
         </div>
@@ -162,6 +165,8 @@ export default {
 </script>
 
 <style scoped>
+@import '../assets/css/main.css';
+
 .section-1 {
     background: #e3e0eb;
 }
@@ -194,6 +199,11 @@ export default {
     border: 2px solid #1c17ff;
     box-sizing: border-box;
     margin-top: 60px;
+}
+.button:hover {
+    color: #ffffff;
+    background: #1c17ff;
+    transition: all ease-in-out 500ms;
 }
 .section-2 {
     display: flex;
@@ -240,7 +250,7 @@ export default {
     text-align: center;
 }
 .bg {
-    max-width: 222px;
+    /* max-width: 222px; */
     padding: 50px;
 }
 .bg p {
@@ -266,8 +276,65 @@ export default {
     line-height: 23px;
     letter-spacing: -0.4px;
     color: #ffffff;
+    border: 2px solid #1c17ff;
+
     padding: 15px 40px;
     margin-top: 50px;
     cursor: pointer;
+}
+.get-started button:hover {
+    color: #1c17ff;
+    background: #ffffff;
+    border: 2px solid #1c17ff;
+    transition: all ease-in-out 500ms;
+}
+@media screen and (max-width: 768px) {
+    .section-1-content {
+        padding: 20px;
+        display: block;
+        text-align: center;
+    }
+    .section-1-content img {
+        display: none;
+    }
+    .section-1-content h1 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .section-2 {
+        padding: 20px;
+        flex-direction: column;
+    }
+    .section-2 img {
+        width: 100%;
+    }
+    .section-3 {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .section-3 h3 {
+        font-size: 45px;
+        margin: 15px 0;
+    }
+    .section-3 h2 {
+        font-size: 25px;
+        line-height: 40px;
+    }
+    .reason {
+        padding: 20px;
+    }
+    .reason h3 {
+        margin: 20px 0;
+    }
+    .reason-gra {
+        flex-direction: column;
+    }
+    .get-started {
+        padding: 50px 20px;
+    }
+    .heading {
+        font-size: 35px;
+        line-height: 45px;
+    }
 }
 </style>
