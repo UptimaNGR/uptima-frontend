@@ -163,6 +163,7 @@ export default {
 <style scoped>
 .contact {
     display: flex;
+    max-height: 722px;
 }
 #app {
     width: 100%;

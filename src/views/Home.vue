@@ -1,37 +1,117 @@
 <template>
     <div id="Solution" class="font">
-        <div class="solutions">
-            <Nav />
-            <div class="container">
-                <h3 class="heading">THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS</h3>
-                <p>
-                    Take charge of your fuel levels by exploring our innovative solutions <br />for
-                    remote monitoring of fuel levels.
-                </p>
-                <div>
-                    <router-link to="/contact-us"
-                        ><button class="btn1">
-                            GET STARTED
-                            <svg
-                                width="7"
-                                height="12"
-                                viewBox="0 0 7 12"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
+        <Nav />
+        <div>
+            <v-carousel :show-arrows="false" :height="650" :cycle="true">
+                <v-carousel-item class="solutions">
+                    <div class="container">
+                        <h3 class="heading">
+                            THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
+                        </h3>
+                        <p>
+                            Take charge of your fuel levels by exploring our innovative solutions
+                            <br />for remote monitoring of fuel levels.
+                        </p>
+                        <div>
+                            <router-link to="/contact-us"
+                                ><button class="btn1">
+                                    GET STARTED
+                                    <svg
+                                        width="7"
+                                        height="12"
+                                        viewBox="0 0 7 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M1 11L6 6L1 1"
+                                            stroke="#F9BC0A"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg></button
+                            ></router-link>
+                            <router-link to="#"
+                                ><button class="btn2 deep-blue-bg">
+                                    GET A FREE DEMO
+                                </button></router-link
                             >
-                                <path
-                                    d="M1 11L6 6L1 1"
-                                    stroke="#F9BC0A"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg></button
-                    ></router-link>
-                    <router-link to="#"
-                        ><button class="btn2 deep-blue-bg">GET A FREE DEMO</button></router-link
-                    >
-                </div>
-            </div>
+                        </div>
+                    </div>
+                </v-carousel-item>
+                <v-carousel-item class="solutions2">
+                    <div class="container">
+                        <h3 class="heading">
+                            THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
+                        </h3>
+                        <p>
+                            Take charge of your fuel levels by exploring our innovative solutions
+                            <br />for remote monitoring of fuel levels.
+                        </p>
+                        <div>
+                            <router-link to="/contact-us"
+                                ><button class="btn1">
+                                    GET STARTED
+                                    <svg
+                                        width="7"
+                                        height="12"
+                                        viewBox="0 0 7 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M1 11L6 6L1 1"
+                                            stroke="#F9BC0A"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg></button
+                            ></router-link>
+                            <router-link to="#"
+                                ><button class="btn2 deep-blue-bg">
+                                    GET A FREE DEMO
+                                </button></router-link
+                            >
+                        </div>
+                    </div>
+                </v-carousel-item>
+                <v-carousel-item class="solutions3">
+                    <div class="container">
+                        <h3 class="heading">
+                            THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
+                        </h3>
+                        <p>
+                            Take charge of your fuel levels by exploring our innovative solutions
+                            <br />for remote monitoring of fuel levels.
+                        </p>
+                        <div>
+                            <router-link to="/contact-us"
+                                ><button class="btn1">
+                                    GET STARTED
+                                    <svg
+                                        width="7"
+                                        height="12"
+                                        viewBox="0 0 7 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M1 11L6 6L1 1"
+                                            stroke="#F9BC0A"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg></button
+                            ></router-link>
+                            <router-link to="#"
+                                ><button class="btn2 deep-blue-bg">
+                                    GET A FREE DEMO
+                                </button></router-link
+                            >
+                        </div>
+                    </div>
+                </v-carousel-item>
+            </v-carousel>
         </div>
         <div class="about">
             <h3>ABOUT US</h3>
@@ -183,7 +263,7 @@
 ></template>
 
 <script>
-import Nav from '../components/Navbar.vue';
+import Nav from '../components/NavbarDark.vue';
 import Footer from '../components/Footer.vue';
 
 export default {
@@ -197,13 +277,20 @@ export default {
 <style scoped>
 .solutions {
     background: url(../assets/images/png/tanker.png);
-    min-height: 650px;
+    background-size: cover;
+}
+.solutions2 {
+    background: url(../assets/images/png/tanker2.png);
+    background-size: cover;
+}
+.solutions3 {
+    background: url(../assets/images/png/tanker3.png);
     background-size: cover;
 }
 .container {
     text-align: center;
     padding: 0 150px;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 .container h3 {
     font-style: normal;
@@ -492,7 +579,7 @@ export default {
 @media screen and (max-width: 768px) {
     .container {
         padding: 10px;
-        margin-top: 20px;
+        margin-top: 50px;
     }
     .container h3 {
         font-size: 35px;
