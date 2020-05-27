@@ -103,14 +103,14 @@ li {
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
-    color: #ffffff;
+    color: #000000;
 }
 .link li a:hover {
-    border-bottom: 4px solid #ffffff;
+    border-bottom: 4px solid #360efc;
     transition: all ease-in-out 200ms;
 }
 .link > li > .router-link-exact-active {
-    border-bottom: 4px solid #ffffff;
+    border-bottom: 4px solid #360efc;
 }
 a {
     text-decoration: none;
@@ -126,16 +126,16 @@ button {
     font-size: 16px;
     line-height: 18px;
     letter-spacing: -0.4px;
-    color: #ffffff;
+    color: #000000;
     background: transparent;
     border: 2px solid #f9bc0a;
     box-sizing: border-box;
     border-radius: 5px;
 }
 .login:hover {
-    color: #ffffff;
-    background: #f9bc0a;
-    border: 2px solid #ffffff;
+    color: #f9bc0a;
+    background: #ffffff;
+    border-spacing: 2px solid #000000;
     transition: all ease-in-out 500ms;
 }
 .try {
@@ -180,6 +180,7 @@ button {
     }
     #nav {
         padding: 0;
+        background: #360efc;
     }
     .mobile-nav {
         display: block;
@@ -210,9 +211,9 @@ button {
     .navbar__button__mobile > span {
         display: block;
         position: absolute;
-        height: 2px;
+        height: 6px;
         width: 100%;
-        background: white;
+        background: #ffffff;
         border-radius: 9px;
         opacity: 1;
         left: 0;

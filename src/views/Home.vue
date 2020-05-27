@@ -1,6 +1,6 @@
 <template>
     <div id="Solution" class="font">
-        <Nav />
+        <Nav class="home-nav" />
         <div>
             <v-carousel :show-arrows="false" :height="650" :cycle="true">
                 <v-carousel-item class="solutions">
@@ -263,7 +263,7 @@
 ></template>
 
 <script>
-import Nav from '../components/NavbarDark.vue';
+import Nav from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
 
 export default {
