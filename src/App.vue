@@ -79,6 +79,23 @@ button {
     background: #ffffff;
     border: none;
 }
+.vue-form-wizard.md .wizard-icon-circle {
+    border-color: #f9bc0a !important;
+}
+.active {
+    color: #f9bc0a !important;
+}
+.vue-form-wizard.md .wizard-navigation .wizard-progress-with-circle {
+    background: #e4e4e4 !important;
+}
+.vue-form-wizard .wizard-icon-circle .wizard-icon-container {
+    background: #ffffff !important;
+    border: none;
+}
+.wizard-progress-bar {
+    background-color: #f9bc0a !important;
+    color: #f9bc0a !important;
+}
 .wizard-card-footer {
     margin-top: 75px;
 }
