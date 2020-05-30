@@ -7,11 +7,7 @@
             </div>
             <div id="app">
                 <div>
-                    <form-wizard
-                        @on-complete="onComplete"
-                        color="#1C17FF"
-                        finish-button-text="SUBMIT"
-                    >
+                    <form-wizard @on-complete="submit" color="#1C17FF" finish-button-text="SUBMIT">
                         <tab-content title="Personal" icon="ti-user">
                             <form class="info">
                                 <div>
@@ -38,7 +34,7 @@
                                         type="phone"
                                         required
                                         placeholder="+234 293 182 1092"
-                                        v-model="phone"
+                                        v-model="phoneNumber"
                                     />
                                 </div>
                             </form>
@@ -51,12 +47,17 @@
                                         type="text"
                                         required
                                         placeholder="John Doe Inc"
-                                        v-model="company"
+                                        v-model="companyName"
                                     />
                                 </div>
                                 <div>
                                     <p>No of tanks</p>
-                                    <input type="number" required placeholder="" v-model="number" />
+                                    <input
+                                        type="number"
+                                        required
+                                        placeholder=""
+                                        v-model="numberOfTanks"
+                                    />
                                 </div>
                                 <div>
                                     <p>Facility type</p>
@@ -64,7 +65,7 @@
                                         type="text"
                                         required
                                         placeholder="Full covered"
-                                        v-model="facility"
+                                        v-model="facilityType"
                                     />
                                 </div>
                             </form>
@@ -74,11 +75,11 @@
                                 <p>Request note</p>
                                 <div>
                                     <textarea
-                                        name="request"
-                                        id="request"
+                                        name="message"
+                                        id="message"
                                         cols="30"
                                         rows="10"
-                                        v-model="request"
+                                        v-model="message"
                                     ></textarea>
                                 </div>
                             </form>
@@ -140,6 +141,8 @@
 
 <script>
 // local registration
+import axios from 'axios';
+
 import { FormWizard, TabContent } from 'vue-form-wizard';
 import Nav from '../components/NavbarDark.vue';
 import Footer from '../components/Footer.vue';
@@ -152,9 +155,42 @@ export default {
         FormWizard,
         TabContent
     },
+    data() {
+        return {
+            name: '',
+            email: '',
+            phoneNumber: '',
+            companyName: '',
+            numberOfTanks: '',
+            facilityType: '',
+            message: ''
+        };
+    },
     methods: {
         onComplete() {
             // alert('Yay. Done!');
+        },
+        submit() {
+            axios
+                .post(`${process.env.VUE_APP_API_URL}/api/v1/contact-us`, {
+                    name: this.name,
+                    email: this.email,
+                    phoneNumber: this.phoneNumber,
+                    companyName: this.companyName,
+                    numberOfTanks: this.numberOfTanks,
+                    facilityType: this.facilityType,
+                    message: this.message
+                })
+                .then(res => {
+                    console.log(res.data);
+                    this.name = '';
+                    this.email = '';
+                    this.phoneNumber = '';
+                    this.companyName = '';
+                    this.numberOfTanks = '';
+                    this.facilityType = '';
+                    this.message = '';
+                });
         }
     }
 };

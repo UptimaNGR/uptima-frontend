@@ -53,7 +53,7 @@
             <div class="text-container">
                 <p class="deep-blue">02</p>
                 <p class="deep-blue">REAL TIME OVERVIEW OF OPERATIONS</p>
-                <h4>stand the actions to take at specific times</h4>
+                <h4 class="small-heading">Stand the actions to take at specific times</h4>
                 <p class="body-text">
                     Managers at filling stations are provided a hawk-eyed view of operations from
                     anywhere they are, thereby easily spotting red flags and preventing possible
