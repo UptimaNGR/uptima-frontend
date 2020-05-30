@@ -1,5 +1,5 @@
 {
-  "trailingomma": "none",
+  "trailingComma": "none",
   "singleQuote": true,
   "comma-dangle": ["error", "never"]
 }
