@@ -6,15 +6,10 @@ import api from '../../utils/api';
 Vue.use(Vuex);
 
 const state = {
-    appsData: {}
 };
 const getters = {
-    getAppsData: state => state.appsData
 };
 const mutations = {
-    setApps: (state, data) => {
-        state.appsData = data;
-    }
 };
 const actions = {
     contactUs: ({ commit }, data) => {
@@ -25,7 +20,7 @@ const actions = {
                         'updateSnackbar',
                         {
                             color: 'success',
-                            text: 'Success, New Payment schedule created',
+                            text: 'Success, message created',
                             showSnackbar: true
                         },
                         { root: true }
@@ -43,7 +38,6 @@ const actions = {
                         },
                         { root: true }
                     );
-                } else {
                 }
                 return error;
             });

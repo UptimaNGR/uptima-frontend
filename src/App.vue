@@ -9,7 +9,7 @@
             :timeout="6000"
         >
             {{ snackbarData.text }}
-            <v-btn dark flat @click="updateSnackbar({ showSnackbar: false })">
+            <v-btn dark text @click="updateSnackbar({ showSnackbar: false })">
                 Close
             </v-btn>
         </v-snackbar>

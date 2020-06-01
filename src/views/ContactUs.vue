@@ -164,6 +164,7 @@ export default {
         ...mapActions('contact', ['contactUs']),
         submit() {
             this.contactUs(this.itemData);
+            this.itemData = '';
         }
     }
 };

@@ -4,9 +4,9 @@ import contact from './modules/contact.us';
 
 Vue.use(Vuex);
 
-const initialState = {
-    contact: contact.state
-};
+// const initialState = {
+//     contact: contact.state
+// };
 
 const initialSnackState = {
     color: '',
@@ -16,7 +16,11 @@ const initialSnackState = {
 
 export default new Vuex.Store({
     state: {
-        snackbarData: initialSnackState
+        snackbarData: {
+            color: '',
+            text: '',
+            showSnackbar: false
+        }
     },
     getters: {
         snackbarData: state => state.snackbarData
@@ -29,6 +33,7 @@ export default new Vuex.Store({
             }, 2000);
         }
     },
+    actions: {},
     modules: {
         contact
     }
