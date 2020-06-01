@@ -1,8 +1,44 @@
 <template>
     <div id="app">
         <router-view />
+        <v-snackbar
+            v-model="snackbarData.showSnackbar"
+            :color="snackbarData.color"
+            :top="true"
+            :right="true"
+            :timeout="6000"
+        >
+            {{ snackbarData.text }}
+            <v-btn dark flat @click="updateSnackbar({ showSnackbar: false })">
+                Close
+            </v-btn>
+        </v-snackbar>
     </div>
 </template>
+
+<script>
+import { mapGetters, mapMutations } from 'vuex';
+
+export default {
+    name: 'App',
+    data() {
+        return {};
+    },
+    created() {
+        this.updateSnackbar({
+            color: '',
+            text: '',
+            showSnackbar: false
+        });
+    },
+    computed: {
+        ...mapGetters(['snackbarData'])
+    },
+    methods: {
+        ...mapMutations(['updateSnackbar'])
+    }
+};
+</script>
 
 <style>
 body {

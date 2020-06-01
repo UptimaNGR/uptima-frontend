@@ -16,7 +16,7 @@
                                         type="text"
                                         required
                                         placeholder="John Doe"
-                                        v-model="name"
+                                        v-model="itemData.name"
                                     />
                                 </div>
                                 <div>
@@ -25,7 +25,7 @@
                                         type="email"
                                         required
                                         placeholder="johndoe@gmail.com"
-                                        v-model="email"
+                                        v-model="itemData.email"
                                     />
                                 </div>
                                 <div>
@@ -34,7 +34,7 @@
                                         type="phone"
                                         required
                                         placeholder="+234 293 182 1092"
-                                        v-model="phoneNumber"
+                                        v-model="itemData.phoneNumber"
                                     />
                                 </div>
                             </form>
@@ -47,7 +47,7 @@
                                         type="text"
                                         required
                                         placeholder="John Doe Inc"
-                                        v-model="companyName"
+                                        v-model="itemData.companyName"
                                     />
                                 </div>
                                 <div>
@@ -56,7 +56,7 @@
                                         type="number"
                                         required
                                         placeholder=""
-                                        v-model="numberOfTanks"
+                                        v-model="itemData.numberOfTanks"
                                     />
                                 </div>
                                 <div>
@@ -65,7 +65,7 @@
                                         type="text"
                                         required
                                         placeholder="Full covered"
-                                        v-model="facilityType"
+                                        v-model="itemData.facilityType"
                                     />
                                 </div>
                             </form>
@@ -79,7 +79,7 @@
                                         id="message"
                                         cols="30"
                                         rows="10"
-                                        v-model="message"
+                                        v-model="itemData.message"
                                     ></textarea>
                                 </div>
                             </form>
@@ -141,7 +141,7 @@
 
 <script>
 // local registration
-import axios from 'axios';
+import { mapActions } from 'vuex';
 
 import { FormWizard, TabContent } from 'vue-form-wizard';
 import Nav from '../components/NavbarDark.vue';
@@ -157,40 +157,13 @@ export default {
     },
     data() {
         return {
-            name: '',
-            email: '',
-            phoneNumber: '',
-            companyName: '',
-            numberOfTanks: '',
-            facilityType: '',
-            message: ''
+            itemData: {}
         };
     },
     methods: {
-        onComplete() {
-            // alert('Yay. Done!');
-        },
+        ...mapActions('contact', ['contactUs']),
         submit() {
-            axios
-                .post(`${process.env.VUE_APP_API_URL}/api/v1/contact-us`, {
-                    name: this.name,
-                    email: this.email,
-                    phoneNumber: this.phoneNumber,
-                    companyName: this.companyName,
-                    numberOfTanks: this.numberOfTanks,
-                    facilityType: this.facilityType,
-                    message: this.message
-                })
-                .then(res => {
-                    console.log(res.data);
-                    this.name = '';
-                    this.email = '';
-                    this.phoneNumber = '';
-                    this.companyName = '';
-                    this.numberOfTanks = '';
-                    this.facilityType = '';
-                    this.message = '';
-                });
+            this.contactUs(this.itemData);
         }
     }
 };
