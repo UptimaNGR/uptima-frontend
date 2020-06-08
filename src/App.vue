@@ -141,8 +141,8 @@ button {
     margin-top: 50px;
 }
 .v-snack__content {
-    height: 80px;
-    font-size: 20px;
+    height: 50px;
+    font-size: 15px;
     font-family: 'Ubuntu', sans-serif;
 }
 @keyframes mymove {
