@@ -33,8 +33,7 @@
         <div class="section-2">
             <div class="text-container">
                 <p class="deep-blue">01</p>
-                <p class="deep-blue">MEASILY ACCESSIBLE DATA</p>
-                <h4 class="small-heading">Understand the actions to take at specific times</h4>
+                <h4 class="small-heading">EASILY ACCESSIBLE DATA</h4>
                 <p class="body-text">
                     Our solution transmits actionable data real time from tanks and tankers to the
                     cloud. This data can easily be shared via the internet amidst departments.
@@ -52,8 +51,7 @@
             </div>
             <div class="text-container">
                 <p class="deep-blue">02</p>
-                <p class="deep-blue">REAL TIME OVERVIEW OF OPERATIONS</p>
-                <h4 class="small-heading">Stand the actions to take at specific times</h4>
+                <h4 class="small-heading">REAL TIME OVERVIEW OF OPERATIONS</h4>
                 <p class="body-text">
                     Managers at filling stations are provided a hawk-eyed view of operations from
                     anywhere they are, thereby easily spotting red flags and preventing possible
@@ -64,8 +62,7 @@
         <div class="section-2">
             <div class="text-container">
                 <p class="deep-blue">03</p>
-                <p class="deep-blue">REDUCTION OF LOGISTIC COSTS</p>
-                <h4 class="small-heading">Understand the actions to take at specific times</h4>
+                <h4 class="small-heading">REDUCTION OF LOGISTIC COSTS</h4>
                 <p class="body-text">
                     Our clients logistic departments use the data provided by Uptima's solutions
                     (predicted order date, tank level consumption and interactive maps) to optimise
@@ -168,7 +165,7 @@ export default {
 @import '../assets/css/main.css';
 
 .section-1 {
-    background: #e3e0eb;
+    background: #f6faff;
 }
 .section-1-content {
     display: flex;
@@ -263,7 +260,7 @@ export default {
 }
 .get-started {
     text-align: center;
-    background: #e3e0eb;
+    background: #f6faff;
     padding: 100px 0;
 }
 .get-started p {

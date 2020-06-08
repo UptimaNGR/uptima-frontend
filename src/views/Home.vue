@@ -416,6 +416,10 @@ export default {
 .bg {
     padding: 50px;
 }
+.bg img {
+    width: 100px;
+    height: 100px;
+}
 .bg p {
     font-style: normal;
     font-weight: 300;
@@ -494,6 +498,8 @@ export default {
     background-color: #f9bc0a;
     border: none;
     width: 150px;
+    margin: auto;
+    margin-bottom: 50px;
 }
 .filling h3 {
     font-style: normal;

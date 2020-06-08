@@ -117,6 +117,11 @@ button {
 }
 .vue-form-wizard.md .wizard-icon-circle {
     border-color: #f9bc0a !important;
+    height: 30px;
+    width: 30px;
+}
+.vue-form-wizard .wizard-nav-pills {
+    margin-top: 20px;
 }
 .active {
     color: #f9bc0a !important;
@@ -133,6 +138,11 @@ button {
     color: #f9bc0a !important;
 }
 .wizard-card-footer {
-    margin-top: 75px;
+    margin-top: 50px;
+}
+.v-snack__content {
+    height: 80px;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
 }
 </style>

@@ -16,6 +16,8 @@
     "vue-backtotop": "^1.6.1",
     "vue-form-wizard": "^0.8.4",
     "vue-router": "^3.1.6",
+    "vue-select": "^3.10.3",
+    "vuelidate": "^0.7.5",
     "vuetify": "^2.2.29",
     "vuex": "^3.4.0",
     "vuex-persist": "^2.2.0"

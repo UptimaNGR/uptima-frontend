@@ -83,7 +83,9 @@ export default {
 }
 hr {
     width: 95%;
-    color: #ffffff;
+    background-color: #ffffff;
+    height: 1px;
+    border: none;
 }
 .address ul > li > span {
     font-style: normal;

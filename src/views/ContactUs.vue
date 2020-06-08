@@ -10,63 +10,136 @@
                     <form-wizard @on-complete="submit" color="#1C17FF" finish-button-text="SUBMIT">
                         <tab-content title="Personal" icon="ti-user">
                             <form class="info">
-                                <div>
+                                <div class="form-section">
                                     <p>Name</p>
                                     <input
+                                        :class="{ error: $v.itemData.name.$error }"
                                         type="text"
-                                        required
                                         placeholder="John Doe"
-                                        v-model="itemData.name"
+                                        @input="$v.itemData.name.$touch()"
+                                        v-model.trim="itemData.name"
+                                        pattern="^[a-zA-Z-]*$"
                                     />
+                                    <div v-if="$v.itemData.name.$dirty">
+                                        <p class="error-message" v-if="!$v.itemData.name.minLength">
+                                            Name must be at least three chatacters
+                                        </p>
+                                        <p class="error-message" v-if="!$v.itemData.name.required">
+                                            Name is required.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div>
+                                <div class="form-section">
                                     <p>Email</p>
                                     <input
+                                        :class="{ error: $v.itemData.email.$error }"
                                         type="email"
-                                        required
+                                        @input="$v.itemData.email.$touch()"
                                         placeholder="johndoe@gmail.com"
-                                        v-model="itemData.email"
+                                        v-model.trim="itemData.email"
+                                        pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
                                     />
+                                    <div v-if="$v.itemData.email.$dirty">
+                                        <p class="error-message" v-if="!$v.itemData.email.email">
+                                            Please enter a valid email address.
+                                        </p>
+                                        <p class="error-message" v-if="!$v.itemData.email.required">
+                                            Email is required.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div>
+                                <div class="form-section">
                                     <p>Phone</p>
                                     <input
+                                        :class="{ error: $v.itemData.phoneNumber.$error }"
                                         type="phone"
-                                        required
+                                        @input="$v.itemData.phoneNumber.$touch()"
                                         placeholder="+234 293 182 1092"
-                                        v-model="itemData.phoneNumber"
+                                        v-model.trim="itemData.phoneNumber"
+                                        pattern="^(0|\+234)[0-9]{10}$"
                                     />
+                                    <div v-if="$v.itemData.phoneNumber.$dirty">
+                                        <p
+                                            class="error-message"
+                                            v-if="!$v.itemData.phoneNumber.phone"
+                                        >
+                                            Phone Number is invalid.
+                                        </p>
+                                        <p
+                                            class="error-message"
+                                            v-if="!$v.itemData.phoneNumber.required"
+                                        >
+                                            Phone Number is required.
+                                        </p>
+                                    </div>
                                 </div>
                             </form>
                         </tab-content>
                         <tab-content title="Company" icon="ti-settings">
                             <form class="info">
-                                <div>
+                                <div class="form-section">
                                     <p>Company</p>
                                     <input
+                                        :class="{ error: $v.itemData.companyName.$error }"
                                         type="text"
-                                        required
+                                        @input="$v.itemData.companyName.$touch()"
                                         placeholder="John Doe Inc"
-                                        v-model="itemData.companyName"
+                                        v-model.trim="itemData.companyName"
                                     />
+                                    <div v-if="$v.itemData.companyName.$dirty">
+                                        <p
+                                            class="error-message"
+                                            v-if="!$v.itemData.companyName.required"
+                                        >
+                                            Company Name is required.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div>
+                                <div class="form-section">
                                     <p>No of tanks</p>
                                     <input
+                                        :class="{ error: $v.itemData.numberOfTanks.$error }"
                                         type="number"
-                                        required
+                                        min="0"
+                                        @input="$v.itemData.numberOfTanks.$touch()"
                                         placeholder=""
-                                        v-model="itemData.numberOfTanks"
+                                        v-model.trim="itemData.numberOfTanks"
                                     />
+                                    <div v-if="$v.itemData.numberOfTanks.$dirty">
+                                        <p
+                                            class="error-message"
+                                            v-if="!$v.itemData.numberOfTanks.required"
+                                        >
+                                            Number of Tanks is required.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div>
+                                <div class="form-section">
                                     <p>Facility type</p>
-                                    <input
+                                    <!-- <input
+                                        :class="{ error: $v.itemData.facilityType.$error }"
                                         type="text"
-                                        required
+                                        @input="$v.itemData.facilityType.$touch()"
                                         placeholder="Full covered"
-                                        v-model="itemData.facilityType"
+                                        v-model.trim="itemData.facilityType"
+                                    /> -->
+                                    <v-select
+                                        :class="{ error: $v.itemData.facilityType.$error }"
+                                        class="inpt"
+                                        placeholder=""
+                                        multiple
+                                        @input="$v.itemData.facilityType.$touch()"
+                                        v-model.trim="itemData.facilityType"
+                                        :options="interestOptions"
                                     />
+                                    <div v-if="$v.itemData.facilityType.$dirty">
+                                        <p
+                                            class="error-message"
+                                            v-if="!$v.itemData.facilityType.required"
+                                        >
+                                            Facility type is required.
+                                        </p>
+                                    </div>
                                 </div>
                             </form>
                         </tab-content>
@@ -75,12 +148,22 @@
                                 <p>Request note</p>
                                 <div>
                                     <textarea
+                                        :class="{ error: $v.itemData.message.$error }"
                                         name="message"
                                         id="message"
                                         cols="30"
                                         rows="10"
-                                        v-model="itemData.message"
+                                        @input="$v.itemData.message.$touch()"
+                                        v-model.trim="itemData.message"
                                     ></textarea>
+                                    <div v-if="$v.itemData.message.$dirty">
+                                        <p
+                                            class="error-message"
+                                            v-if="!$v.itemData.message.required"
+                                        >
+                                            This field is required.
+                                        </p>
+                                    </div>
                                 </div>
                             </form>
                         </tab-content>
@@ -130,7 +213,15 @@
                                 />
                             </svg>
                         </button>
-                        <button slot="finish" class="submit">SUBMIT</button>
+                        <v-btn
+                            slot="finish"
+                            class="submit"
+                            :loading="loading"
+                            :disabled="loading || !isFilled"
+                            color="secondary"
+                        >
+                            SUBMIT
+                        </v-btn>
                     </form-wizard>
                 </div>
             </div>
@@ -144,27 +235,78 @@
 import { mapActions } from 'vuex';
 
 import { FormWizard, TabContent } from 'vue-form-wizard';
+import {
+    helpers, required, email, minLength
+} from 'vuelidate/lib/validators';
+import 'vue-select/dist/vue-select.css';
+import vSelect from 'vue-select';
 import Nav from '../components/NavbarDark.vue';
 import Footer from '../components/Footer.vue';
 import 'vue-form-wizard/dist/vue-form-wizard.min.css';
+
+const phone = helpers.regex('phone', /^(0|\+234)[0-9]{10}$/);
 
 export default {
     components: {
         Nav,
         Footer,
         FormWizard,
-        TabContent
+        TabContent,
+        vSelect
     },
     data() {
         return {
-            itemData: {}
+            itemData: {},
+            interestOptions: ['isolated', 'tanker', 'station'],
+            loading: false
         };
+    },
+    validations: {
+        itemData: {
+            name: {
+                required,
+                minLength: minLength(3)
+            },
+            email: {
+                required,
+                email
+            },
+            phoneNumber: {
+                required,
+                phone
+            },
+            companyName: {
+                required
+            },
+            numberOfTanks: {
+                required
+            },
+            facilityType: {
+                required
+            },
+            message: {
+                required
+            }
+        }
+    },
+    computed: {
+        isFilled() {
+            return (
+                this.itemData.name &&
+                this.itemData.email &&
+                this.itemData.phoneNumber &&
+                this.itemData.companyName &&
+                this.itemData.numberOfTanks &&
+                this.itemData.facilityType &&
+                this.itemData.message
+            );
+        }
     },
     methods: {
         ...mapActions('contact', ['contactUs']),
         submit() {
+            this.loading = true;
             this.contactUs(this.itemData);
-            this.itemData = '';
         }
     }
 };
@@ -206,17 +348,22 @@ export default {
     letter-spacing: -0.4px;
     color: #939393;
 }
+.form-section {
+    margin-bottom: 30px;
+    height: 100px;
+}
 input {
     outline: none;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 textarea {
     width: 100%;
-    height: 250px;
+    height: 350px;
     background: #ffffff;
     border: 1px solid #c5c5c6;
     outline: none;
     resize: none;
+    padding: 10px;
 }
 .back {
     font-style: normal;
@@ -252,7 +399,7 @@ textarea {
     margin-left: 10px;
 }
 .submit {
-    background: #360efc;
+    background: #360efc !important;
     border: 0.8px solid #2460a7;
     padding: 10px 30px;
     font-style: normal;
@@ -261,6 +408,16 @@ textarea {
     line-height: 18px;
     letter-spacing: -0.4px;
     color: #ffffff;
+}
+.error-message {
+    color: red !important;
+    font-size: 15px !important;
+    margin: 0;
+}
+button[disabled] {
+    cursor: not-allowed !important;
+    color: black !important;
+    opacity: 0.7 !important;
 }
 @media screen and (max-width: 768px) {
     #app {
@@ -272,5 +429,17 @@ textarea {
     .image {
         display: none;
     }
+}
+</style>
+<style>
+.vs__dropdown-toggle {
+    padding: 10px 0;
+}
+.vs__selected {
+    color: #ffffff;
+    background: #360efc;
+}
+.vs__deselect {
+    fill: #ffffff;
 }
 </style>
