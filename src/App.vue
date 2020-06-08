@@ -145,4 +145,12 @@ button {
     font-size: 20px;
     font-family: 'Ubuntu', sans-serif;
 }
+@keyframes mymove {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 50px;
+    }
+}
 </style>

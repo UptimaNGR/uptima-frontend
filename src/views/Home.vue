@@ -419,6 +419,9 @@ export default {
 .bg img {
     width: 100px;
     height: 100px;
+    position: relative;
+    animation: mymove 5s infinite;
+    animation-direction: alternate;
 }
 .bg p {
     font-style: normal;
@@ -430,6 +433,11 @@ export default {
 }
 .images img {
     width: 20%;
+    transition: transform 0.4s;
+}
+.images img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 .help {
     padding: 100px;

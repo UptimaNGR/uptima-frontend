@@ -218,6 +218,13 @@ export default {
 .cont {
     padding: 0 100px;
 }
+.section-2 img {
+    transition: transform 0.4s;
+}
+.section-2 img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
 .section-3 {
     padding: 50px 100px;
     display: flex;
@@ -249,6 +256,14 @@ export default {
 .bg {
     /* max-width: 222px; */
     padding: 50px;
+}
+.bg img {
+    position: relative;
+    animation: mymove 5s infinite;
+    animation-direction: alternate;
+
+    width: 100px;
+    height: 100px;
 }
 .bg p {
     font-style: normal;
