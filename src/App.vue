@@ -1,8 +1,44 @@
 <template>
     <div id="app">
         <router-view />
+        <v-snackbar
+            v-model="snackbarData.showSnackbar"
+            :color="snackbarData.color"
+            :top="true"
+            :right="true"
+            :timeout="6000"
+        >
+            {{ snackbarData.text }}
+            <v-btn dark text @click="updateSnackbar({ showSnackbar: false })">
+                Close
+            </v-btn>
+        </v-snackbar>
     </div>
 </template>
+
+<script>
+import { mapGetters, mapMutations } from 'vuex';
+
+export default {
+    name: 'App',
+    data() {
+        return {};
+    },
+    created() {
+        this.updateSnackbar({
+            color: '',
+            text: '',
+            showSnackbar: false
+        });
+    },
+    computed: {
+        ...mapGetters(['snackbarData'])
+    },
+    methods: {
+        ...mapMutations(['updateSnackbar'])
+    }
+};
+</script>
 
 <style>
 body {
@@ -81,6 +117,11 @@ button {
 }
 .vue-form-wizard.md .wizard-icon-circle {
     border-color: #f9bc0a !important;
+    height: 30px;
+    width: 30px;
+}
+.vue-form-wizard .wizard-nav-pills {
+    margin-top: 20px;
 }
 .active {
     color: #f9bc0a !important;
@@ -97,6 +138,19 @@ button {
     color: #f9bc0a !important;
 }
 .wizard-card-footer {
-    margin-top: 75px;
+    margin-top: 50px;
+}
+.v-snack__content {
+    height: 50px;
+    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+}
+@keyframes mymove {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 50px;
+    }
 }
 </style>

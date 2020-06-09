@@ -416,6 +416,13 @@ export default {
 .bg {
     padding: 50px;
 }
+.bg img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: mymove 5s infinite;
+    animation-direction: alternate;
+}
 .bg p {
     font-style: normal;
     font-weight: 300;
@@ -426,6 +433,11 @@ export default {
 }
 .images img {
     width: 20%;
+    transition: transform 0.4s;
+}
+.images img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 .help {
     padding: 100px;
@@ -494,6 +506,8 @@ export default {
     background-color: #f9bc0a;
     border: none;
     width: 150px;
+    margin: auto;
+    margin-bottom: 50px;
 }
 .filling h3 {
     font-style: normal;

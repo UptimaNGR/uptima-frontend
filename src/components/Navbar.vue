@@ -130,7 +130,6 @@ button {
     background: transparent;
     border: 2px solid #f9bc0a;
     box-sizing: border-box;
-    border-radius: 5px;
 }
 .login:hover {
     color: #f9bc0a;
@@ -140,7 +139,6 @@ button {
 }
 .try {
     padding: 10px 20px;
-    border-radius: 5px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -214,7 +212,6 @@ button {
         height: 6px;
         width: 100%;
         background: #ffffff;
-        border-radius: 9px;
         opacity: 1;
         left: 0;
         transform: rotate(0deg);
