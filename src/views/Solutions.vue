@@ -259,9 +259,7 @@ export default {
 }
 .bg img {
     position: relative;
-    animation: mymove 5s infinite;
-    animation-direction: alternate;
-
+    animation: float 6s ease-in-out infinite;
     width: 100px;
     height: 100px;
 }
