@@ -31,11 +31,7 @@
             </div>
             <a href="#"> Forgot password?</a>
           </div>
-          <button
-            class="button"
-            @click.prevent="submit"
-            :disabled="!loginData.entry && !loginData.password"
-          >
+          <button class="button" @click.prevent="submit" :disabled="!entry || !loginData.password">
             LOGIN
           </button>
         </form>
