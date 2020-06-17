@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Solutions from '../views/Solutions.vue';
 import ContactUs from '../views/ContactUs.vue';
+import Login from '../views/Login.vue';
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
         path: '/contact-us',
         name: 'ContactUs',
         component: ContactUs
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        component: Login
     }
 ];
 
