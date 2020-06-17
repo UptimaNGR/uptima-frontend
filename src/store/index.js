@@ -13,12 +13,23 @@ const initialSnackState = {
 
 export default new Vuex.Store({
     state: {
+        status: '',
         snackbarData: initialSnackState
     },
     getters: {
+        getStatus: state => state.status,
         snackbarData: state => state.snackbarData
     },
     mutations: {
+        reqInit: state => {
+            state.status = 'loading';
+        },
+        reqSuccess: state => {
+            state.status = 'success';
+        },
+        reqError: state => {
+            state.status = 'error';
+        },
         updateSnackbar: (state, data) => {
             state.snackbarData = { ...initialSnackState, ...data };
             setTimeout(() => {

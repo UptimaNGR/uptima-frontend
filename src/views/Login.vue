@@ -31,8 +31,15 @@
             </div>
             <a href="#"> Forgot password?</a>
           </div>
-          <button class="button" @click.prevent="submit" :disabled="!entry || !loginData.password">
-            LOGIN
+          <button
+            class="button"
+            @click.prevent="submit"
+            :disabled="!entry || !loginData.password || isLoading"
+          >
+            <span v-if="getStatus === 'loading'">
+              <v-progress-circular width="3" indeterminate size="12"></v-progress-circular>
+            </span>
+            <span v-else>LOGIN</span>
           </button>
         </form>
 
@@ -48,7 +55,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
     name: 'Login',
@@ -57,12 +64,27 @@ export default {
             loginData: {
                 password: ''
             },
-            entry: ''
+            entry: '',
+            isLoading: false
         };
+    },
+    computed: {
+        ...mapGetters(['getStatus'])
+    },
+    watch: {
+        getStatus(value) {
+            if (value === 'success') {
+                this.isLoading = false;
+            } else if (value === 'error') {
+                this.isLoading = false;
+            }
+        }
     },
     methods: {
         ...mapActions('auth', ['login']),
         submit() {
+            this.isLoading = true;
+
             if (this.entry.includes('@')) {
                 this.loginData.email = this.entry;
             } else {

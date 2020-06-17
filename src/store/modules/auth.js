@@ -40,15 +40,23 @@ const mutations = {
 
 const actions = {
     login: ({ commit }, data) => {
+        commit('reqInit', null, { root: true });
+
         api
             .post('/api/v1/admin/auth/login', data)
             .then(response => {
                 if (response.status === 200) {
+                    commit('reqSuccess', null, { root: true });
+
                     return true;
                 }
+                commit('reqError', null, { root: true });
+
                 return false;
             })
             .catch(error => {
+                commit('reqError', null, { root: true });
+
                 commit(
                     'updateSnackbar',
                     {
