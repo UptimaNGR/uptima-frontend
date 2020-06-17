@@ -1,5 +1,5 @@
 <template>
-  <div id="footer" class="deep-blue-bg font">
+  <footer id="footer" class="deep-blue-bg font">
     <div class="sec1">
       <div class="links">
         <ul>
@@ -34,7 +34,7 @@
           /></svg
       ></back-to-top>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>

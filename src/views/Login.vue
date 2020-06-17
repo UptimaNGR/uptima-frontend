@@ -42,11 +42,9 @@
             <span v-else>LOGIN</span>
           </button>
         </form>
-
-        <p>Don’t have an account? Click <router-link to="" class="here">here</router-link></p>
       </div>
       <div class="footer">
-        <p>&copy; Novus, Epok Technologies</p>
+        <p>&copy; Uptima, Epok Technologies</p>
         <p>Terms & Conditions</p>
         <p>Privacy Policy</p>
       </div>
@@ -123,9 +121,6 @@ export default {
   line-height: 16px;
   color: #817f7f;
 }
-.here {
-  color: #1c17ff;
-}
 h1 {
   font-style: normal;
   font-weight: normal;
@@ -151,6 +146,13 @@ input {
 .input {
   margin-left: 22px;
   width: 80%;
+}
+
+.input::-webkit-input-placeholder {
+  color: #939393;
+}
+.input:focus::-webkit-input-placeholder {
+  color: #5051db;
 }
 .check {
   display: flex;
