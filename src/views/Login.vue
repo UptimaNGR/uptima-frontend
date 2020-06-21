@@ -11,18 +11,41 @@
           <h1>Log In to view your dashboard</h1>
         </header>
         <form action="">
-          <div class="form-input">
-            <img src="../assets/images/svg/person.svg" />
-            <input type="text" placeholder="Email or Username" class="input" v-model="entry" />
+          <div class="errors">
+            <div class="form-input">
+              <img src="../assets/images/svg/person.svg" />
+              <input
+                :class="{ error: $v.entry.$error }"
+                type="text"
+                placeholder="Email or Username"
+                class="input"
+                @input="$v.entry.$touch()"
+                v-model.trim="entry"
+              />
+            </div>
+            <div v-if="$v.entry.$dirty">
+              <span class="error-message" v-if="!$v.entry.minLength">
+                Minimum Length required is 4 characters
+              </span>
+            </div>
           </div>
-          <div class="form-input">
-            <img src="../assets/images/svg/padlock.svg" />
-            <input
-              type="password"
-              placeholder="Password"
-              class="input"
-              v-model="loginData.password"
-            />
+          <div class="errors">
+            <div class="form-input">
+              <img src="../assets/images/svg/padlock.svg" />
+              <input
+                :class="{ error: $v.loginData.password.$error }"
+                type="password"
+                placeholder="Password"
+                class="input"
+                @input="$v.loginData.password.$touch()"
+                v-model.trim="loginData.password"
+              />
+            </div>
+            <div v-if="$v.loginData.password.$dirty">
+              <span class="error-message" v-if="!$v.loginData.password.minLength">
+                Minimum Length required is 8 characters
+              </span>
+            </div>
           </div>
           <div class="check">
             <div class="flex-check">
@@ -34,7 +57,7 @@
           <button
             class="button"
             @click.prevent="submit"
-            :disabled="!entry || !loginData.password || isLoading"
+            :disabled="!entry || !loginData.password || isLoading || $v.$invalid"
           >
             <span v-if="getStatus === 'loading'">
               <v-progress-circular width="3" indeterminate size="12"></v-progress-circular>
@@ -44,7 +67,7 @@
         </form>
       </div>
       <div class="footer">
-        <p>&copy; Uptima, Epok Technologies</p>
+        <p>&copy; Uptima Solutions</p>
         <p>Terms & Conditions</p>
         <p>Privacy Policy</p>
       </div>
@@ -54,6 +77,7 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
+import { minLength } from 'vuelidate/lib/validators';
 
 export default {
     name: 'Login',
@@ -65,6 +89,16 @@ export default {
             entry: '',
             isLoading: false
         };
+    },
+    validations: {
+        loginData: {
+            password: {
+                minLength: minLength(8)
+            }
+        },
+        entry: {
+            minLength: minLength(4)
+        }
     },
     computed: {
         ...mapGetters(['getStatus'])
@@ -139,10 +173,19 @@ h1 {
   padding: 0 18px;
   margin-bottom: 17px;
 }
+.error-message {
+  color: red !important;
+  font-size: 10px !important;
+  margin: 0;
+}
+.errors {
+  min-height: 90px;
+}
 input {
   border: none;
   outline: none;
 }
+
 .input {
   margin-left: 22px;
   width: 80%;
@@ -159,6 +202,7 @@ input {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 27px;
+  margin-top: 15px;
 }
 .flex-check {
   display: flex;

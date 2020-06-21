@@ -27,7 +27,7 @@
     <nav class="mobile-nav">
       <div class="mobile-nav-content">
         <div class="icon-mob">
-          <img src="../assets/images/svg/icon-logo.svg" />
+          <img src="../assets/images/svg/icon-logo.svg" alt="icon"/>
         </div>
         <div>
           <button
