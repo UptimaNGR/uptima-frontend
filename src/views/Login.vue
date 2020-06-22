@@ -43,7 +43,7 @@
             </div>
             <div v-if="$v.loginData.password.$dirty">
               <span class="error-message" v-if="!$v.loginData.password.minLength">
-                Minimum Length required is 8 characters
+                Minimum Length required is 7 characters
               </span>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default {
     validations: {
         loginData: {
             password: {
-                minLength: minLength(8)
+                minLength: minLength(7)
             }
         },
         entry: {
