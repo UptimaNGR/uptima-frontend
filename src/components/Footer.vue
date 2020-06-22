@@ -76,6 +76,9 @@ export default {
   letter-spacing: -0.4px;
   color: #ffffff;
 }
+.links ul > li > a:hover {
+  color: #f9bc0a;
+}
 .links ul > li > .router-link-exact-active {
   color: #f9bc0a;
 }

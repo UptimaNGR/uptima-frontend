@@ -331,7 +331,8 @@ export default {
   margin-left: 30px;
 }
 .reason-gra {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
 .reason {
   padding: 50px 100px;
@@ -559,8 +560,7 @@ export default {
     padding: 10px;
   }
   .reason-gra {
-    display: block;
-    margin: auto;
+    grid-template-columns: auto;
   }
   .bg {
     max-width: none;
