@@ -449,23 +449,23 @@ export default {
   color: #000000;
 }
 .section-3 {
-  padding: 50px 100px;
+  padding: auto;
   display: inline-flex;
   justify-content: center;
-  min-width: 100%;
+  width: 100%;
   max-width: 100%;
 }
 .section-3 h2 {
   font-style: normal;
   font-weight: normal;
-  font-size: 150%;
+  font-size: 4vmin;
   text-align: center;
   /* line-height: 80px; */
 }
 .section-3 h3 {
   font-style: normal;
   font-weight: normal;
-  font-size: 300%;
+  font-size: 7vmin;
   /* line-height: 57px; */
   text-align: center;
 }
