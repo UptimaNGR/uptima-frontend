@@ -348,7 +348,7 @@ export default {
   background-size: 100% 100%;
 }
 .section-2 img:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
   cursor: pointer;
 }
 .section-2 .img-container {
