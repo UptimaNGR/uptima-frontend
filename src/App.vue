@@ -20,23 +20,23 @@
 import { mapGetters, mapMutations } from 'vuex';
 
 export default {
-    name: 'App',
-    data() {
-        return {};
-    },
-    created() {
-        this.updateSnackbar({
-            color: '',
-            text: '',
-            showSnackbar: false
-        });
-    },
-    computed: {
-        ...mapGetters(['snackbarData'])
-    },
-    methods: {
-        ...mapMutations(['updateSnackbar'])
-    }
+  name: 'App',
+  data() {
+    return {};
+  },
+  created() {
+    this.updateSnackbar({
+      color: '',
+      text: '',
+      showSnackbar: false
+    });
+  },
+  computed: {
+    ...mapGetters(['snackbarData'])
+  },
+  methods: {
+    ...mapMutations(['updateSnackbar'])
+  }
 };
 </script>
 

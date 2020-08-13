@@ -215,79 +215,79 @@ import { mapActions } from 'vuex';
 
 import { FormWizard, TabContent } from 'vue-form-wizard';
 import {
-    helpers, required, email, minLength
+  helpers, required, email, minLength
 } from 'vuelidate/lib/validators';
 import 'vue-select/dist/vue-select.css';
 import vSelect from 'vue-select';
-import Nav from '../components/NavbarDark.vue';
+import Nav from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
 import 'vue-form-wizard/dist/vue-form-wizard.min.css';
 
 const phone = helpers.regex('phone', /^(0|\+234)[0-9]{10}$/);
 
 export default {
-    components: {
-        Nav,
-        Footer,
-        FormWizard,
-        TabContent,
-        vSelect
-    },
-    data() {
-        return {
-            itemData: {},
-            interestOptions: ['isolated', 'tanker', 'station'],
-            loading: false
-        };
-    },
-    validations: {
-        itemData: {
-            name: {
-                required,
-                minLength: minLength(3)
-            },
-            email: {
-                required,
-                email
-            },
-            phoneNumber: {
-                required,
-                phone
-            },
-            companyName: {
-                required
-            },
-            numberOfTanks: {
-                required
-            },
-            facilityType: {
-                required
-            },
-            message: {
-                required
-            }
-        }
-    },
-    computed: {
-        isFilled() {
-            return (
-                this.itemData.name &&
+  components: {
+    Nav,
+    Footer,
+    FormWizard,
+    TabContent,
+    vSelect
+  },
+  data() {
+    return {
+      itemData: {},
+      interestOptions: ['isolated', 'tanker', 'station'],
+      loading: false
+    };
+  },
+  validations: {
+    itemData: {
+      name: {
+        required,
+        minLength: minLength(3)
+      },
+      email: {
+        required,
+        email
+      },
+      phoneNumber: {
+        required,
+        phone
+      },
+      companyName: {
+        required
+      },
+      numberOfTanks: {
+        required
+      },
+      facilityType: {
+        required
+      },
+      message: {
+        required
+      }
+    }
+  },
+  computed: {
+    isFilled() {
+      return (
+        this.itemData.name &&
         this.itemData.email &&
         this.itemData.phoneNumber &&
         this.itemData.companyName &&
         this.itemData.numberOfTanks &&
         this.itemData.facilityType &&
         this.itemData.message
-            );
-        }
-    },
-    methods: {
-        ...mapActions('contact', ['contactUs']),
-        submit() {
-            this.loading = true;
-            this.contactUs(this.itemData);
-        }
+      );
     }
+  },
+  methods: {
+    ...mapActions('contact', ['contactUs']),
+    submit() {
+      this.loading = true;
+      this.contactUs(this.itemData);
+    }
+  }
 };
 </script>
 

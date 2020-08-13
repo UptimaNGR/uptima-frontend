@@ -6,40 +6,40 @@ import auth from './modules/auth';
 Vue.use(Vuex);
 
 const initialSnackState = {
-    color: '',
-    text: '',
-    showSnackbar: false
+  color: '',
+  text: '',
+  showSnackbar: false
 };
 
 export default new Vuex.Store({
-    state: {
-        status: '',
-        snackbarData: initialSnackState
+  state: {
+    status: '',
+    snackbarData: initialSnackState
+  },
+  getters: {
+    getStatus: state => state.status,
+    snackbarData: state => state.snackbarData
+  },
+  mutations: {
+    reqInit: state => {
+      state.status = 'loading';
     },
-    getters: {
-        getStatus: state => state.status,
-        snackbarData: state => state.snackbarData
+    reqSuccess: state => {
+      state.status = 'success';
     },
-    mutations: {
-        reqInit: state => {
-            state.status = 'loading';
-        },
-        reqSuccess: state => {
-            state.status = 'success';
-        },
-        reqError: state => {
-            state.status = 'error';
-        },
-        updateSnackbar: (state, data) => {
-            state.snackbarData = { ...initialSnackState, ...data };
-            setTimeout(() => {
-                state.snackbarData = { ...initialSnackState };
-            }, 2000);
-        }
+    reqError: state => {
+      state.status = 'error';
     },
-    actions: {},
-    modules: {
-        contact,
-        auth
+    updateSnackbar: (state, data) => {
+      state.snackbarData = { ...initialSnackState, ...data };
+      setTimeout(() => {
+        state.snackbarData = { ...initialSnackState };
+      }, 2000);
     }
+  },
+  actions: {},
+  modules: {
+    contact,
+    auth
+  }
 });

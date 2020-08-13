@@ -1,24 +1,19 @@
 <template>
   <div id="nav">
     <div class="nav font">
-      <div class="logo">
-        <img src="../assets/images/png/normal-logo.png" alt="logo" />
-      </div>
-      <div class="routes">
-        <div class="links">
-          <ul class="link">
-            <li><router-link to="/">HOME</router-link></li>
-            <li><router-link to="#">ABOUT</router-link></li>
-            <li><router-link to="/solutions">SOLUTIONS</router-link></li>
-          </ul>
+      <a href="http://uptima.ng">
+        <div class="logo">
+          <img src="../assets/images/png/normal-logo.png" alt="logo"/>
         </div>
+      </a>
+      <div class="routes">
         <div class="buttons">
           <ul>
             <li>
-              <router-link to="/login"><button class="login">Login</button></router-link>
+              <a href="http://utrackdashboard.uptima.ng"><button class="login">Login</button></a>
             </li>
             <li>
-              <router-link to="#"><button class="try">TRY FOR FREE</button></router-link>
+              <router-link to="/contact-us"><button class="try">Contact Us</button></router-link>
             </li>
           </ul>
         </div>
@@ -26,9 +21,11 @@
     </div>
     <nav class="mobile-nav">
       <div class="mobile-nav-content">
-        <div class="icon-mob">
-          <img src="../assets/images/svg/icon-white.svg" alt="white-icon" />
-        </div>
+        <a href="http://uptima.ng">
+          <div class="icon-mob">
+            <img src="../assets/images/svg/icon-white.svg" alt="white-icon" />
+          </div>
+        </a>
         <div>
           <button
             class="navbar__button__mobile"
@@ -44,19 +41,10 @@
       <div class="nav__mobile" :class="{ open: isOpen }">
         <ul class="m-0 list-unstyled nav__mobile__list">
           <li class="nav__mobile__list__item" @click="isOpen = !isOpen">
-            <router-link class="nav__mobile__link" to="/">HOME</router-link>
+            <a href="http://utrackdashboard.uptima.ng" class="nav__mobile__link" to="/login">Login</a>
           </li>
           <li class="nav__mobile__list__item" @click="isOpen = !isOpen">
-            <router-link class="nav__mobile__link" to="#">ABOUT</router-link>
-          </li>
-          <li class="nav__mobile__list__item" @click="isOpen = !isOpen">
-            <router-link class="nav__mobile__link" to="/solutions">SOLUTIONS</router-link>
-          </li>
-          <li class="nav__mobile__list__item" @click="isOpen = !isOpen">
-            <router-link class="nav__mobile__link" to="/login">LOGIN</router-link>
-          </li>
-          <li class="nav__mobile__list__item" @click="isOpen = !isOpen">
-            <router-link class="nav__mobile__link" to="#">TRY FOR FREE</router-link>
+            <router-link class="nav__mobile__link" to="/contact-us">Contact Us</router-link>
           </li>
         </ul>
       </div>
@@ -66,9 +54,9 @@
 
 <script>
 export default {
-    data: () => ({
-        isOpen: false
-    })
+  data: () => ({
+    isOpen: false
+  })
 };
 </script>
 

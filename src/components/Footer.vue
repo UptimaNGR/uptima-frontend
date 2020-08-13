@@ -1,15 +1,6 @@
 <template>
   <footer id="footer" class="deep-blue-bg font">
     <div class="sec1">
-      <div class="links">
-        <ul>
-          <li><router-link to="/">HOME</router-link></li>
-          <li><router-link to="/contact-us">CONTACT US</router-link></li>
-          <li><router-link to="#">ABOUT </router-link></li>
-          <li><router-link to="/solutions">SOLUTIONS </router-link></li>
-        </ul>
-      </div>
-      <hr />
       <div class="address">
         <ul>
           <li>&copy; <span>Uptima Solutions</span></li>
@@ -41,7 +32,7 @@
 import BackToTop from 'vue-backtotop';
 
 export default {
-    components: { BackToTop }
+  components: { BackToTop }
 };
 </script>
 
