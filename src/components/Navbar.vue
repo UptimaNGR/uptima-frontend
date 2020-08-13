@@ -115,14 +115,15 @@ button {
   letter-spacing: -0.4px;
   color: #000000;
   background: transparent;
-  border: 2px solid #f9bc0a;
+  border: 2px solid #3887F6;
   box-sizing: border-box;
 }
 .login:hover {
-  color: #f9bc0a;
+  color: #5051DB;
   background: #ffffff;
   border-spacing: 2px solid #000000;
   transition: all ease-in-out 500ms;
+  border: 2px solid #5051DB
 }
 .try {
   padding: 10px 20px;

@@ -709,18 +709,6 @@ export default {
   .section-2 img {
     width: 100%;
   }
-  /* .section-3 {
-    flex-direction: column;
-    padding: 20px;
-  }
-  .section-3 h3 {
-    font-size: 45px;
-    margin: 15px 0;
-  }
-  .section-3 h2 {
-    font-size: 25px;
-    line-height: 40px;
-  } */
   .reason {
     padding: 20px;
   }
@@ -733,26 +721,6 @@ export default {
   .get-started {
     padding: 50px 20px;
   }
-  /* .newsletter {
-    padding: 30px;
-    margin-top: 0;
-    width: 100vw;
-    padding: 20px 0;
-  }
-  .form {
-    display: block;
-    text-align: center;
-  }
-  .form input {
-    width: 80%;
-    height: 50px;
-    margin-bottom: 20px;
-  }
-  .newsletter button {
-    display: block;
-    margin: auto;
-    margin-top: 20px;
-  } */
   .get-started {
     padding: 50px 20px;
   }
