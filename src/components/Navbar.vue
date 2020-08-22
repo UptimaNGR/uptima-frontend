@@ -9,10 +9,13 @@
       <div class="routes">
         <div class="buttons">
           <ul>
+            <li v-if = "this.$route.path === '/contact-us'">
+              <router-link to="/"><button class="try">Home</button></router-link>
+            </li>
             <li>
               <a href="http://utrackdashboard.uptima.ng"><button class="login">Login</button></a>
             </li>
-            <li>
+            <li v-if = "this.$route.path !== '/contact-us'">
               <router-link to="/contact-us"><button class="try">Contact Us</button></router-link>
             </li>
           </ul>
@@ -40,10 +43,13 @@
       </div>
       <div class="nav__mobile" :class="{ open: isOpen }">
         <ul class="m-0 list-unstyled nav__mobile__list">
+          <li v-if = "this.$route.path === '/contact-us'" class="nav__mobile__list__item" @click="isOpen = !isOpen">
+            <router-link class="nav__mobile__link" to="/">Home</router-link>
+          </li>
           <li class="nav__mobile__list__item" @click="isOpen = !isOpen">
             <a href="http://utrackdashboard.uptima.ng" class="nav__mobile__link" to="/login">Login</a>
           </li>
-          <li class="nav__mobile__list__item" @click="isOpen = !isOpen">
+          <li v-if = "this.$route.path !== '/contact-us'" class="nav__mobile__list__item" @click="isOpen = !isOpen">
             <router-link class="nav__mobile__link" to="/contact-us">Contact Us</router-link>
           </li>
         </ul>
@@ -63,6 +69,12 @@ export default {
 <style scoped>
 #nav {
   padding: 20px 100px;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  width: 100%;
+  max-width: 1440px;
+  background-color: #ffffff;
 }
 .nav {
   display: flex;
@@ -113,7 +125,7 @@ button {
   font-size: 16px;
   line-height: 18px;
   letter-spacing: -0.4px;
-  color: #000000;
+  color: #3887f6;
   background: transparent;
   border: 2px solid #3887F6;
   box-sizing: border-box;

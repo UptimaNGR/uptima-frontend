@@ -295,6 +295,7 @@ export default {
 .contact {
   display: flex;
   max-height: 722px;
+  margin-top: 90px
 }
 #app {
   width: 100%;

@@ -45,8 +45,9 @@ body {
   margin: 0;
 }
 #app {
-  max-width: 1440px;
+  max-width: 1440px!important;
   display: block;
+  width: 100%;
   margin: auto;
 }
 .light-blue {
@@ -101,11 +102,11 @@ body {
   font-weight: normal;
   font-size: 19px;
   line-height: 24px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   color: #817f7f;
 }
 .font {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 a {
   text-decoration: none;

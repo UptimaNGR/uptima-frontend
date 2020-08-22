@@ -13,14 +13,12 @@
               <br />for remote monitoring of fuel levels.
             </p>
             <div>
-              <router-link to="/contact-us"
-                ><button class="btn1">
-                  GET STARTED
-                </button></router-link
-              >
-              <a href="http://utrackdashboard.uptima.ng">
+              <a href="#"><button class="btn1">
+                  WATCH DEMO
+                </button></a>
+              <a href="#">
                 <button class="btn2 deep-blue-bg">
-                  LOGIN
+                  DOWNLOAD PROPOSAL
                 </button>
               </a>
             </div>
@@ -36,14 +34,12 @@
               <br />for remote monitoring of fuel levels.
             </p>
             <div>
-              <router-link to="/contact-us"
-                ><button class="btn1">
-                  GET STARTED
-                </button></router-link
-              >
-              <a href="http://utrackdashboard.uptima.ng">
+              <a href="#"><button class="btn1">
+                  WATCH DEMO
+                </button></a>
+              <a href="#">
                 <button class="btn2 deep-blue-bg">
-                  LOGIN
+                  DOWNLOAD PROPOSAL
                 </button>
               </a>
             </div>
@@ -59,14 +55,12 @@
               <br />for remote monitoring of fuel levels.
             </p>
             <div>
-              <router-link to="/contact-us"
-                ><button class="btn1">
-                  GET STARTED
-                </button></router-link
-              >
-              <a href="http://utrackdashboard.uptima.ng">
+              <a href="#"><button class="btn1">
+                  WATCH DEMO
+                </button></a>
+              <a href="#">
                 <button class="btn2 deep-blue-bg">
-                  LOGIN
+                  DOWNLOAD PROPOSAL
                 </button>
               </a>
             </div>
@@ -125,11 +119,11 @@
       </div>
     </div>
     <div class="reason">
-      <router-link to="contact-us"
+      <!-- <router-link to="contact-us"
         ><button class="deep-blue">
           TALK TO US
         </button></router-link
-      >
+      > -->
     </div>
     <div class="images">
       <img src="../assets/images/png/pic1.png" alt="pic1" />
@@ -229,6 +223,9 @@ export default {
 </script>
 
 <style scoped>
+.home-nav {
+  max-width: 100%;
+}
 .solutions {
   background: url(../assets/images/png/tankker.png);
   background-size: cover;
@@ -454,6 +451,8 @@ export default {
   justify-content: center;
   width: 100%;
   max-width: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .section-3 h2 {
   font-style: normal;
@@ -474,10 +473,21 @@ export default {
   grid-template-columns: auto auto auto auto;
 }
 .reason {
+  margin-top: 20px;
   padding: 50px 100px;
+}
+.reason-gra > div {
+  padding: 20px;
+  display: block;
+  align-items: center;
+}
+.reason-gra > div >img {
+  display: block;
+  margin: auto !important;
 }
 .heading {
   text-align: center;
+  margin-bottom: 10px;
 }
 .bg {
   /* max-width: 222px; */
@@ -636,9 +646,30 @@ export default {
   margin-top: 100px;
 }
 @media screen and (max-width: 768px) {
+  * {
+    max-width: 100%;
+  }
+  #Solution {
+    padding-top:90px ;
+  }
+  .btn1 {
+    margin: 10px;
+  }
+  .btn2 {
+    margin: 10px;
+  }
+  .img-container {
+    min-width: 90%;
+    margin: 5px;
+  }
+  .text-container {
+    min-width: 90%;
+    margin: 5px;
+  }
   .container {
     padding: 10px;
-    margin-top: 50px;
+    position: absolute;
+    margin: auto;
   }
   .container h3 {
     font-size: 35px;
@@ -662,6 +693,9 @@ export default {
   }
   .reason-gra {
     grid-template-columns: auto;
+  }
+  .reason-gra > div {
+    padding: 10px;
   }
   .bg {
     max-width: none;
@@ -701,10 +735,20 @@ export default {
   }
   .section-2 {
     padding: 20px;
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .before-enter p, .before-enter h4 {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+  }
+  .reverse.before-enter p, .reverse.before-enter h4 {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
   }
   .reverse {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .section-2 img {
     width: 100%;
@@ -717,9 +761,6 @@ export default {
   }
   .reason-gra {
     grid-template-columns: 1fr;
-  }
-  .get-started {
-    padding: 50px 20px;
   }
   .get-started {
     padding: 50px 20px;
