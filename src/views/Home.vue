@@ -1,68 +1,74 @@
 <template>
   <div id="Solution" class="font">
     <Nav class="home-nav" />
-    <div>
+    <div class = "main-container">
       <v-carousel :show-arrows="false" :height="650" :cycle="true">
         <v-carousel-item class="solutions">
           <div class="container">
-            <h3 class="heading">
-              THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
-            </h3>
-            <p>
-              Take charge of your fuel levels by exploring our innovative solutions
-              <br />for remote monitoring of fuel levels.
-            </p>
-            <div>
-              <a href="#"><button class="btn1">
-                  WATCH DEMO
-                </button></a>
-              <a href="#">
-                <button class="btn2 deep-blue-bg">
-                  DOWNLOAD PROPOSAL
-                </button>
-              </a>
+            <div class = "container-inner">
+              <h3 class="heading">
+                THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
+              </h3>
+              <p>
+                Take charge of your fuel levels by exploring our innovative solutions
+                <br />for remote monitoring of fuel levels.
+              </p>
+              <div>
+                <a href="#"><button class="btn1">
+                    WATCH DEMO
+                  </button></a>
+                <a href="../assets/images/pdf/up.pdf" target="_blank">
+                  <button class="btn2 deep-blue-bg">
+                    DOWNLOAD PROPOSAL
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </v-carousel-item>
         <v-carousel-item class="solutions2">
           <div class="container">
-            <h3 class="heading">
-              THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
-            </h3>
-            <p>
-              Take charge of your fuel levels by exploring our innovative solutions
-              <br />for remote monitoring of fuel levels.
-            </p>
-            <div>
-              <a href="#"><button class="btn1">
-                  WATCH DEMO
-                </button></a>
-              <a href="#">
-                <button class="btn2 deep-blue-bg">
-                  DOWNLOAD PROPOSAL
-                </button>
-              </a>
+            <div class = "container-inner">
+              <h3 class="heading">
+                THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
+              </h3>
+              <p>
+                Take charge of your fuel levels by exploring our innovative solutions
+                <br />for remote monitoring of fuel levels.
+              </p>
+              <div>
+                <a href="#"><button class="btn1">
+                    WATCH DEMO
+                  </button></a>
+                <a href="../assets/images/pdf/UP.pdf" target="_blank">
+                  <button class="btn2 deep-blue-bg">
+                    DOWNLOAD PROPOSAL
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </v-carousel-item>
         <v-carousel-item class="solutions3">
           <div class="container">
-            <h3 class="heading">
-              THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
-            </h3>
-            <p>
-              Take charge of your fuel levels by exploring our innovative solutions
-              <br />for remote monitoring of fuel levels.
-            </p>
-            <div>
-              <a href="#"><button class="btn1">
-                  WATCH DEMO
-                </button></a>
-              <a href="#">
-                <button class="btn2 deep-blue-bg">
-                  DOWNLOAD PROPOSAL
-                </button>
-              </a>
+            <div class = "container-inner">
+              <h3 class="heading">
+                THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
+              </h3>
+              <p>
+                Take charge of your fuel levels by exploring our innovative solutions
+                <br />for remote monitoring of fuel levels.
+              </p>
+              <div>
+                <a href="#"><button class="btn1">
+                    WATCH DEMO
+                  </button></a>
+                <a href="../assets/images/pdf/UP.pdf" target="_blank">
+                  <button class="btn2 deep-blue-bg">
+                    DOWNLOAD PROPOSAL
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </v-carousel-item>
@@ -199,12 +205,28 @@
         </div>
       </div>
     </div>
-    <div class="get-started">
+    <!-- <div class="get-started">
       <h1 class="heading">TAKE CHARGE OF YOUR FUEL LEVELS AND SAVE</h1>
       <p>
         Get the Insurance you need for your tanks to never run dry.
       </p>
       <router-link to="/contact-us"><button class="deep-blue-bg">Get Started</button></router-link>
+    </div> -->
+    <div class="filling">
+      <hr />
+      <h3>BE AHEAD. USE WHAT IT TAKES TO <br />GROW BIG</h3>
+      <img src="../assets/images/png/filling.png" alt="filling" />
+      <div class="light-blue-bg newsletter">
+        <h2 class="yellow">NEWSLETTER</h2>
+        <p>Stay in touch with latest updates from us. We promise we wouldn’t spam</p>
+        <form class="form">
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <button>
+            SUBSCRIBE
+          </button>
+        </form>
+      </div>
     </div>
     <Footer class="footer" />
   </div>
@@ -226,6 +248,9 @@ export default {
 .home-nav {
   max-width: 100%;
 }
+.main-container {
+  margin-top: 90px;
+}
 .solutions {
   background: url(../assets/images/png/tankker.png);
   background-size: cover;
@@ -240,8 +265,16 @@ export default {
 }
 .container {
   text-align: center;
-  padding: 0 150px;
-  margin-top: 200px;
+  /* padding: 0 150px; */
+  padding: auto;
+  min-width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background: rgba(80, 81, 219, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container h3 {
   font-style: normal;
@@ -259,6 +292,8 @@ export default {
   line-height: 30px;
   letter-spacing: -0.4px;
   color: #ffffff;
+  margin: 0;
+
 }
 .btn1 {
   background: #3887f6;
@@ -642,15 +677,96 @@ export default {
   border: 2px solid #1c17ff;
   transition: all ease-in-out 500ms;
 }
+.filling hr {
+  height: 1px;
+  background-color: #f9bc0a;
+  border: none;
+  width: 150px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.filling h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #817f7f;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.filling img {
+  width: 100%;
+}
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+.newsletter {
+  width: 75%;
+  padding: 50px 100px;
+  display: block;
+  margin: auto;
+  margin-top: -200px;
+  transform: translateY(10px);
+}
+.newsletter h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 34px;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.newsletter p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #939393;
+  margin-bottom: 70px;
+}
+.newsletter input {
+  background: #ffffff;
+  border: 1px solid rgba(28, 23, 255, 0.25);
+  padding: 0 10px;
+  width: 40%;
+}
+.newsletter input::placeholder {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.4px;
+  color: #939393;
+}
+.newsletter button {
+  border: 2px solid #3887f6;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.4px;
+  color: #3887f6;
+  padding: 15px 25px;
+  background: transparent;
+}
+.newsletter button:hover {
+  color: #ffffff;
+  background: #5051db;
+  border: 2px solid #5051db;
+  transition: all ease-in-out 500ms;
+}
 .footer {
   margin-top: 100px;
 }
 @media screen and (max-width: 768px) {
   * {
     max-width: 100%;
-  }
-  #Solution {
-    padding-top:90px ;
   }
   .btn1 {
     margin: 10px;
@@ -768,6 +884,32 @@ export default {
   .heading {
     font-size: 35px;
     line-height: 45px;
+  }
+  .filling h3 {
+    font-size: 20px;
+  }
+  .filling img {
+    width: 100vw;
+  }
+  .newsletter {
+    padding: 30px;
+    margin-top: 0;
+    width: 100vw;
+    padding: 20px 0;
+  }
+  .form {
+    display: block;
+    text-align: center;
+  }
+  .form input {
+    width: 80%;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  .newsletter button {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
   }
   .footer {
     margin-top: 0;

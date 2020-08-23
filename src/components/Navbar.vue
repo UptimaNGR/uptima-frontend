@@ -178,7 +178,7 @@ button {
   }
   #nav {
     padding: 0;
-    background: #360efc;
+    background: rgba(80, 81, 219, 1);
   }
   .mobile-nav {
     display: block;
