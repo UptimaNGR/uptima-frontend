@@ -84,12 +84,12 @@
         </p>
       </div>
       <div class= "img-container">
-        <img src="../assets/images/png/analysis.png" alt="analysis" />
+        <img src="../assets/images/png/analysis1.png" alt="analysis" />
       </div>
     </div>
     <div v-scrollanimation class="section-2 reverse light-blue-bg">
       <div class= "img-container">
-        <img src="../assets/images/png/graph.png" alt="graph" />
+        <img src="../assets/images/png/graph1.svg" alt="graph" />
       </div>
       <div class="text-container">
         <p class="deep-blue">02</p>
@@ -109,18 +109,18 @@
         </p>
       </div>
       <div class= "img-container">
-        <img src="../assets/images/png/analysis.png" alt="analysis" />
+        <img src="../assets/images/png/analysis2.jpg" alt="analysis" />
       </div>
     </div>
     <div v-scrollanimation class="section-2 reverse light-blue-bg">
       <div class= "img-container">
-        <img src="../assets/images/png/graph.png" alt="graph" />
+        <img src="../assets/images/png/settings.png" alt="graph" />
       </div>
       <div class="text-container">
         <p class="deep-blue">04</p>
         <h4 class="small-heading">PERSONALISED SETTINGS</h4>
         <p class="body-text">
-          Managers at filling stations are allowed to make personalized settings such as different low-level notifcation fo each of your facility, and set price of your product for beter financial report and operational management.
+          Managers at filling stations are allowed to make personalized settings such as different low-level notifcation for each of your facility, and set price of your product for beter financial report and operational management.
         </p>
       </div>
     </div>
@@ -159,10 +159,11 @@
       </div>
       <div class="deep-blue-bg shadow cont-mid">
         <div>
-          <h3>0%</h3>
+          <h3>97%</h3>
           <h2>
-            Fuel <br />
-            wastage
+            <!-- Fuel <br />
+            wastage -->
+            Accuracy
           </h2>
         </div>
       </div>
@@ -180,7 +181,7 @@
       <h3 class="heading">WHY CHOOSE UPTIMA</h3>
       <div class="reason-gra">
         <div class="light-blue-bg bg">
-          <img src="../assets/images/svg/oil.svg" alt="oil" />
+          <img src="../assets/images/png/cloud2.png" alt="cloud" />
           <p>
             Our solutions are cloud based hence clients data can easily be accessed via the
             internet, remotely providing our customers faster communication within the company's
@@ -188,7 +189,7 @@
           </p>
         </div>
         <div class="light-blue-bg bg">
-          <img src="../assets/images/svg/connect.svg" alt="connect" />
+          <img src="../assets/images/png/flexible.png" alt="connect" />
           <p>
             With our on-demand subscription based pricing structure, Uptima offers its clients
             increased flexibility. Clients can easily choose a monthly payment plan and this affords
@@ -197,7 +198,7 @@
           </p>
         </div>
         <div class="light-blue-bg bg">
-          <img src="../assets/images/svg/screen.svg" alt="screen" />
+          <img src="../assets/images/png/logistics2.png" alt="screen" />
           <p>
             Uptima works with most major oil and gas companies who use our solutions to optimize
             their logistics and offer a better service to their customers.
@@ -270,6 +271,7 @@ export default {
 .solutions {
   background: url(../assets/images/png/tankker.png);
   background-size: cover;
+  height: 100%;
 }
 .solutions2 {
   background: url(../assets/images/png/tanker2.png);
@@ -310,7 +312,9 @@ export default {
   letter-spacing: -0.4px;
   color: #ffffff;
   margin: 0;
-
+}
+.container-inner {
+  max-width: 750px
 }
 .btn1 {
   background: #3887f6;
@@ -393,6 +397,7 @@ export default {
 .section-2 img {
   transition: transform 0.4s;
   max-width: 100%;
+  width: 300px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -402,9 +407,16 @@ export default {
 }
 .section-2 .img-container {
   max-width: 40%;
+  padding: 20px;
   align-content : center;
   justify-content: center;
   }
+.section-2 .text-container {
+  max-width: 60%;
+  padding: 15px;
+  align-content : center;
+  justify-content: center;
+}
 .section-2.before-enter {
   opacity: 0;
   transform: translateY(100px);
@@ -549,7 +561,7 @@ export default {
 .bg img {
   /* position: relative; */
   /* animation: float 6s ease-in-out infinite; */
-  width: 100px;
+  /* width: 100px; */
   height: 100px;
   margin: auto;
 }
