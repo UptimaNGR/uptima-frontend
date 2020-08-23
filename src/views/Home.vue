@@ -17,7 +17,7 @@
                 <a href="#"><button class="btn1">
                     WATCH DEMO
                   </button></a>
-                <a href="../assets/images/pdf/up.pdf" target="_blank">
+                <a href="../assets/images/pdf/UP.pdf" target="_blank">
                   <button class="btn2 deep-blue-bg">
                     DOWNLOAD PROPOSAL
                   </button>
