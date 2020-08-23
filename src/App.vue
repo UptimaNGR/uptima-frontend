@@ -101,7 +101,7 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 19px;
-  line-height: 24px;
+  line-height: 35px;
   letter-spacing: 2px;
   color: #817f7f;
 }

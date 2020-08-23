@@ -14,10 +14,10 @@
                 <br />for remote monitoring of fuel levels.
               </p>
               <div>
-                <a href="#"><button class="btn1">
+                <a href="#"><button class="btn1" @click.prevent = 'showDemo'>
                     WATCH DEMO
                   </button></a>
-                <a href="../assets/images/pdf/UP.pdf" target="_blank">
+                <a href="/pdf/Utrack.pdf" target="_blank">
                   <button class="btn2 deep-blue-bg">
                     DOWNLOAD PROPOSAL
                   </button>
@@ -37,10 +37,10 @@
                 <br />for remote monitoring of fuel levels.
               </p>
               <div>
-                <a href="#"><button class="btn1">
+                <a href="#"><button class="btn1" @click.prevent = 'showDemo'>
                     WATCH DEMO
                   </button></a>
-                <a href="../assets/images/pdf/UP.pdf" target="_blank">
+                <a href="/pdf/Utrack.pdf" target="_blank">
                   <button class="btn2 deep-blue-bg">
                     DOWNLOAD PROPOSAL
                   </button>
@@ -60,10 +60,10 @@
                 <br />for remote monitoring of fuel levels.
               </p>
               <div>
-                <a href="#"><button class="btn1">
+                <a href="#"><button class="btn1" @click.prevent = 'showDemo'>
                     WATCH DEMO
                   </button></a>
-                <a href="../assets/images/pdf/UP.pdf" target="_blank">
+                <a href="/pdf/Utrack.pdf" target="_blank">
                   <button class="btn2 deep-blue-bg">
                     DOWNLOAD PROPOSAL
                   </button>
@@ -228,6 +228,7 @@
         </form>
       </div>
     </div>
+    <Video v-show = 'watchDemo' @close='closeDemo' :key = 'watchDemo' :play = 'watchDemo'></Video>
     <Footer class="footer" />
   </div>
 </template>
@@ -235,11 +236,26 @@
 <script>
 import Nav from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
+import Video from '../components/VideoModal.vue';
 
 export default {
   components: {
     Nav,
-    Footer
+    Footer,
+    Video
+  },
+  data() {
+    return {
+      watchDemo: false
+    };
+  },
+  methods: {
+    showDemo() {
+      this.watchDemo = true;
+    },
+    closeDemo() {
+      this.watchDemo = false;
+    }
   }
 };
 </script>
@@ -271,7 +287,7 @@ export default {
   height: 100%;
   position: absolute;
   z-index: 1;
-  background: rgba(80, 81, 219, 0.8);
+  background: rgba(80, 81, 219, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
