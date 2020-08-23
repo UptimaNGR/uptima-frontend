@@ -217,7 +217,7 @@
       <h3>BE AHEAD. USE WHAT IT TAKES TO <br />GROW BIG</h3>
       <img src="../assets/images/png/filling.png" alt="filling" />
       <div class="light-blue-bg newsletter">
-        <h2 class="yellow">NEWSLETTER</h2>
+        <h2 class="deep-blue">NEWSLETTER</h2>
         <p>Stay in touch with latest updates from us. We promise we wouldn’t spam</p>
         <form class="form">
           <input type="text" placeholder="Name" />
@@ -287,7 +287,8 @@ export default {
   height: 100%;
   position: absolute;
   z-index: 1;
-  background: rgba(80, 81, 219, 0.4);
+  /* background: rgba(80, 81, 219, 0.4); */
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -695,7 +696,7 @@ export default {
 }
 .filling hr {
   height: 1px;
-  background-color: #f9bc0a;
+  background-color: #5051db;
   border: none;
   width: 150px;
   margin: auto;

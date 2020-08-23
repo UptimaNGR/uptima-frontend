@@ -1,19 +1,16 @@
 <template>
   <div class="modal-backdrop">
     <div class="modal">
-      <header class="modal-header">
-        <h1 class= "deep-blue"> DEMO</h1>
-        <v-btn
-          replace
-          to="/"
-          @click.prevent = "close"
-          class = "red-color"
-        ><span >Close</span>
-        <v-icon medium>mdi-close</v-icon></v-btn>
-      </header>
       <section class="modal-body">
         <youtube  v-if = 'play' video-id ="AyeGWOk9J28"></youtube>
       </section>
+      <v-btn
+          replace
+          to="/"
+          @click.prevent = "close"
+          class = "close-btn deep-blue"
+        >
+        <v-icon medium>mdi-close</v-icon></v-btn>
       <footer>
       </footer>
     </div>
@@ -48,7 +45,7 @@ export default {
   }
 
   .modal {
-    background: #FFFFFF;
+    background: transparent;
     box-shadow: 2px 2px 20px 1px;
     overflow-x: auto;
     display: flex;
@@ -63,19 +60,14 @@ export default {
     justify-content: center;
     align-items: center;
   }
-
-  .modal-header {
-    border-bottom: 1px solid #eeeeee;
-    color: #4AAE9B;
-    justify-content: space-between;
-  }
   .modal-body {
     position: relative;
-    padding: 20px 10px;
     max-width: 100%;
     display: flex;
   }
-  .red-color {
+  .close-btn {
+    border-radius: 0;
     color: red;
+    background: #5051db;
   }
 </style>
