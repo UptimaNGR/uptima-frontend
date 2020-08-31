@@ -13,10 +13,27 @@
               <router-link to="/"><button class="try">Home</button></router-link>
             </li>
             <li>
-              <a href="http://utrackdashboard.uptima.ng"><button class="login">Login</button></a>
+              <a class = "login" href="http://utrackdashboard.uptima.ng"><button class="login-link">Login</button></a>
             </li>
             <li v-if = "this.$route.path !== '/contact-us'">
               <router-link to="/contact-us"><button class="try">Contact Us</button></router-link>
+            </li>
+            <li class= "dropdown">
+              <button  class="try">
+                Proposal <v-icon color = "#5051DB">mdi-chevron-down</v-icon>
+              </button>
+              <div>
+                <ul class="dropdown-content">
+                  <li class="dropdown-items">
+                    <button class= "try"  @click.prevent="watchVideo()">Video</button>
+                  </li>
+                  <li  class="dropdown-items">
+                    <button class= "try"><a href="/pdf/Utrack.pdf" target="_blank">
+                  PDF
+                </a></button>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -47,10 +64,23 @@
             <router-link class="nav__mobile__link" to="/">Home</router-link>
           </li>
           <li class="nav__mobile__list__item" @click="isOpen = !isOpen">
-            <a href="http://utrackdashboard.uptima.ng" class="nav__mobile__link" to="/login">Login</a>
+            <a href="http://utrackdashboard.uptima.ng" class="nav__mobile__link login-link" to="/login">Login</a>
           </li>
           <li v-if = "this.$route.path !== '/contact-us'" class="nav__mobile__list__item" @click="isOpen = !isOpen">
             <router-link class="nav__mobile__link" to="/contact-us">Contact Us</router-link>
+          </li>
+          <hr>
+          <li class="nav__mobile__list__item">Proposal
+            <ul>
+              <li class="nav__mobile__list__item" @click='isOpen = !isOpen; watchVideo()'>
+                Video
+              </li>
+              <li class="nav__mobile__list__item" @click='isOpen = !isOpen'>
+                <a href="/pdf/Utrack.pdf" target="_blank">
+                  PDF
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -62,7 +92,12 @@
 export default {
   data: () => ({
     isOpen: false
-  })
+  }),
+  methods: {
+    watchVideo() {
+      this.$emit('video');
+    }
+  }
 };
 </script>
 
@@ -92,12 +127,16 @@ ul {
 }
 li {
   list-style: none;
-  margin-left: 40px;
+  margin-left: 20px;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 .logo > img {
   height: 50px;
 }
-.link li a {
+/* .link li a.login {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -107,7 +146,7 @@ li {
 .link li a:hover {
   border-bottom: 4px solid #360efc;
   transition: all ease-in-out 200ms;
-}
+} */
 .link > li > .router-link-exact-active {
   border-bottom: 4px solid #360efc;
 }
@@ -125,19 +164,42 @@ button {
   font-size: 16px;
   line-height: 18px;
   letter-spacing: -0.4px;
-  color: #3887f6;
+  /* color: #3887f6; */
+  color: #5051DB;
   background: transparent;
-  border: 2px solid #3887F6;
+  /* border: 2px solid #3887F6; */
   box-sizing: border-box;
 }
 .login:hover {
-  color: #5051DB;
+  /* color: #5051DB; */
+  color: #3887f6;
   background: #ffffff;
   border-spacing: 2px solid #000000;
   transition: all ease-in-out 500ms;
-  border: 2px solid #5051DB
+  /* border: 2px solid #5051DB */
 }
 .try {
+  padding: 10px 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -0.4px;
+  /* color: #3887f6; */
+  color: #5051DB;
+  background: transparent;
+  /* border: 2px solid #3887F6; */
+  box-sizing: border-box;
+}
+.try:hover {
+  /* color: #5051DB; */
+  color: #3887f6;
+  background: #ffffff;
+  border-spacing: 2px solid #000000;
+  transition: all ease-in-out 500ms;
+  /* border: 2px solid #5051DB */
+}
+/* .try {
   padding: 10px 20px;
   font-style: normal;
   font-weight: 500;
@@ -152,6 +214,18 @@ button {
   background: #5051db;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.55);
   transition: all ease-in-out 500ms;
+} */
+.dropdown {
+  overflow: hidden;
+}
+.dropdown-content {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  background-color: #ffffff;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 .nav__mobile {
   display: block;

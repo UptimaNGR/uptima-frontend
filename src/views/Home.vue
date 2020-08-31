@@ -1,8 +1,8 @@
 <template>
   <div id="Solution" class="font">
-    <Nav class="home-nav" />
+    <Nav class="home-nav" @video='showDemo'/>
     <div class = "main-container">
-      <v-carousel :show-arrows="false" :height="650" :cycle="true">
+      <!-- <v-carousel :show-arrows="false" :height="650" :cycle="true">
         <v-carousel-item class="solutions">
           <div class="container">
             <div class = "container-inner">
@@ -72,7 +72,34 @@
             </div>
           </div>
         </v-carousel-item>
-      </v-carousel>
+      </v-carousel> -->
+      <div class="top-hero"></div>
+      <div class="bottom-hero"></div>
+      <!-- <img src="../assets/images/svg/Pipeline.svg" alt="" class="top-hero">
+      <img src="../assets/images/svg/Truck.svg" alt="" class="bottom-hero"> -->
+      <div class="container">
+        <div class = "container-inner">
+          <p>A BETTER  WAY TO SAVE COST AND TAKE CONTROL</p>
+          <h3>
+            Take Charge of Your Fuel Level
+          </h3>
+          <h3 class= "deep-blue-txt">and Save</h3>
+          <!-- <p>
+            Take charge of your fuel levels by exploring our innovative solutions
+            <br />for remote monitoring of fuel levels.
+          </p> -->
+          <!-- <div> -->
+            <!-- <a href="#"><button class="btn1" @click.prevent = 'showDemo'>
+                WATCH DEMO
+              </button></a>
+            <a href="/pdf/Utrack.pdf" target="_blank">
+              <button class="btn2 deep-blue-bg">
+                DOWNLOAD PROPOSAL
+              </button>
+            </a>
+          </div> -->
+        </div>
+      </div>
     </div>
     <div v-scrollanimation class="section-2">
       <div class="text-container">
@@ -266,9 +293,45 @@ export default {
   max-width: 100%;
 }
 .main-container {
-  margin-top: 90px;
+  /* margin-top: 90px; */
+  position: relative;
+  height: 650px;
 }
-.solutions {
+.main-container .top-hero, .main-container .bottom-hero {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition:  opacity 1s ease-in-out;
+  -o-transition:  opacity 1s ease-in-out;
+  transition:  opacity 1s ease-in-out;
+}
+.top-hero {
+  background: url(../assets/images/svg/Pipeline.svg);
+}
+.bottom-hero {
+  background: url(../assets/images/svg/Truck.svg);
+}
+.main-container .top-hero {
+  animation-name: imgFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-delay: 0s;
+}
+.main-container .bottom-hero {
+  animation-name: imgFadeInOutTwo;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-delay: 0s;
+}
+/* .solutions {
   background: url(../assets/images/png/tankker.png);
   background-size: cover;
   height: 100%;
@@ -280,7 +343,7 @@ export default {
 .solutions3 {
   background: url(../assets/images/png/tanker3.png);
   background-size: cover;
-}
+} */
 .container {
   text-align: center;
   /* padding: 0 150px; */
@@ -290,7 +353,7 @@ export default {
   position: absolute;
   z-index: 1;
   /* background: rgba(80, 81, 219, 0.4); */
-  background: rgba(0, 0, 0, 0.4);
+  /* background: rgba(0, 0, 0, 0.4); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -301,20 +364,26 @@ export default {
   font-size: 45px;
   line-height: 55px;
   letter-spacing: 1px;
-  color: #ffffff;
+  color: #000000;
   margin: 0;
 }
 .container p {
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 20px;
   line-height: 30px;
   letter-spacing: -0.4px;
-  color: #ffffff;
+  color: #000000;
   margin: 0;
 }
 .container-inner {
-  max-width: 750px
+  /* max-width: 750px;*/
+  /* align-items: left; */
+  min-width: 100%;
+  text-align: left;
+}
+.deep-blue-txt {
+  color: #5051db !important;
 }
 .btn1 {
   background: #3887f6;
@@ -502,6 +571,7 @@ export default {
   padding: 50px;
 }
 .bg p {
+  margin-top: 20px;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -797,6 +867,9 @@ export default {
   * {
     max-width: 100%;
   }
+  .main-container {
+    height: 100vh;
+  }
   .btn1 {
     margin: 10px;
   }
@@ -942,6 +1015,34 @@ export default {
   }
   .footer {
     margin-top: 0;
+  }
+}
+@keyframes imgFadeInOut {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes imgFadeInOutTwo {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>
