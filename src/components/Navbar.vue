@@ -13,7 +13,7 @@
               <router-link to="/"><button class="try">Home</button></router-link>
             </li>
             <li>
-              <a class = "login" href="http://utrackdashboard.uptima.ng"><button class="login-link">Login</button></a>
+              <a class ="login-link" href="http://utrackdashboard.uptima.ng"><button class = "login">Login</button></a>
             </li>
             <li v-if = "this.$route.path !== '/contact-us'">
               <router-link to="/contact-us"><button class="try">Contact Us</button></router-link>
@@ -136,24 +136,24 @@ a {
 .logo > img {
   height: 50px;
 }
-/* .link li a.login {
+/* .link li a.login-link {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   color: #000000;
 }
-.link li a:hover {
+.link li a.login-link:hover {
   border-bottom: 4px solid #360efc;
   transition: all ease-in-out 200ms;
 } */
 .link > li > .router-link-exact-active {
   border-bottom: 4px solid #360efc;
 }
-a {
+/* a {
   text-decoration: none;
   cursor: pointer;
-}
+} */
 button {
   cursor: pointer;
 }
