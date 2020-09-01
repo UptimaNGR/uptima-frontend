@@ -12,6 +12,7 @@
     "autoprefixer": "^9.8.0",
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
+    "serialize-javascript": "^4.0.0",
     "vue": "^2.6.11",
     "vue-backtotop": "^1.6.1",
     "vue-form-wizard": "^0.8.4",
