@@ -2,81 +2,8 @@
   <div id="Solution" class="font">
     <Nav class="home-nav" @video='showDemo'/>
     <div class = "main-container">
-      <!-- <v-carousel :show-arrows="false" :height="650" :cycle="true">
-        <v-carousel-item class="solutions">
-          <div class="container">
-            <div class = "container-inner">
-              <h3 class="heading">
-                THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
-              </h3>
-              <p>
-                Take charge of your fuel levels by exploring our innovative solutions
-                <br />for remote monitoring of fuel levels.
-              </p>
-              <div>
-                <a href="#"><button class="btn1" @click.prevent = 'showDemo'>
-                    WATCH DEMO
-                  </button></a>
-                <a href="/pdf/Utrack.pdf" target="_blank">
-                  <button class="btn2 deep-blue-bg">
-                    DOWNLOAD PROPOSAL
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </v-carousel-item>
-        <v-carousel-item class="solutions2">
-          <div class="container">
-            <div class = "container-inner">
-              <h3 class="heading">
-                THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
-              </h3>
-              <p>
-                Take charge of your fuel levels by exploring our innovative solutions
-                <br />for remote monitoring of fuel levels.
-              </p>
-              <div>
-                <a href="#"><button class="btn1" @click.prevent = 'showDemo'>
-                    WATCH DEMO
-                  </button></a>
-                <a href="/pdf/Utrack.pdf" target="_blank">
-                  <button class="btn2 deep-blue-bg">
-                    DOWNLOAD PROPOSAL
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </v-carousel-item>
-        <v-carousel-item class="solutions3">
-          <div class="container">
-            <div class = "container-inner">
-              <h3 class="heading">
-                THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
-              </h3>
-              <p>
-                Take charge of your fuel levels by exploring our innovative solutions
-                <br />for remote monitoring of fuel levels.
-              </p>
-              <div>
-                <a href="#"><button class="btn1" @click.prevent = 'showDemo'>
-                    WATCH DEMO
-                  </button></a>
-                <a href="/pdf/Utrack.pdf" target="_blank">
-                  <button class="btn2 deep-blue-bg">
-                    DOWNLOAD PROPOSAL
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </v-carousel-item>
-      </v-carousel> -->
       <div class="top-hero"></div>
       <div class="bottom-hero"></div>
-      <!-- <img src="../assets/images/svg/Pipeline.svg" alt="" class="top-hero">
-      <img src="../assets/images/svg/Truck.svg" alt="" class="bottom-hero"> -->
       <div class="container">
         <div class = "container-inner">
           <p>A BETTER  WAY TO SAVE COST AND TAKE CONTROL</p>
@@ -84,20 +11,6 @@
             Take Charge of Your Fuel Level
           </h3>
           <h3 class= "deep-blue-txt">and Save</h3>
-          <!-- <p>
-            Take charge of your fuel levels by exploring our innovative solutions
-            <br />for remote monitoring of fuel levels.
-          </p> -->
-          <!-- <div> -->
-            <!-- <a href="#"><button class="btn1" @click.prevent = 'showDemo'>
-                WATCH DEMO
-              </button></a>
-            <a href="/pdf/Utrack.pdf" target="_blank">
-              <button class="btn2 deep-blue-bg">
-                DOWNLOAD PROPOSAL
-              </button>
-            </a>
-          </div> -->
         </div>
       </div>
     </div>
@@ -145,18 +58,13 @@
       </div>
       <div class="text-container">
         <p class="deep-blue">04</p>
-        <h4 class="small-heading">PERSONALISED SETTINGS</h4>
+        <h4 class="small-heading">PERSONALIZED SETTINGS</h4>
         <p class="body-text">
-          Managers at filling stations are allowed to make personalized settings such as different low-level notifcation for each of your facility, and set price of your product for beter financial report and operational management.
+          Managers at filling stations are allowed to make personalized settings such as different low-level notification for each of your facility, and set price of your product for better financial report and operational management.
         </p>
       </div>
     </div>
     <div class="reason">
-      <!-- <router-link to="contact-us"
-        ><button class="deep-blue">
-          TALK TO US
-        </button></router-link
-      > -->
     </div>
     <div class="images">
       <img src="../assets/images/png/pic1.png" alt="pic1" />
@@ -188,8 +96,6 @@
         <div>
           <h3>97%</h3>
           <h2>
-            <!-- Fuel <br />
-            wastage -->
             Accuracy
           </h2>
         </div>
@@ -233,13 +139,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="get-started">
-      <h1 class="heading">TAKE CHARGE OF YOUR FUEL LEVELS AND SAVE</h1>
-      <p>
-        Get the Insurance you need for your tanks to never run dry.
-      </p>
-      <router-link to="/contact-us"><button class="deep-blue-bg">Get Started</button></router-link>
-    </div> -->
     <div class="filling">
       <hr />
       <h3>BE AHEAD. USE WHAT IT TAKES TO <br />GROW BIG</h3>
@@ -293,7 +192,6 @@ export default {
   max-width: 100%;
 }
 .main-container {
-  /* margin-top: 90px; */
   position: relative;
   height: 650px;
 }
@@ -331,29 +229,14 @@ export default {
   animation-direction: alternate;
   animation-delay: 0s;
 }
-/* .solutions {
-  background: url(../assets/images/png/tankker.png);
-  background-size: cover;
-  height: 100%;
-}
-.solutions2 {
-  background: url(../assets/images/png/tanker2.png);
-  background-size: cover;
-}
-.solutions3 {
-  background: url(../assets/images/png/tanker3.png);
-  background-size: cover;
-} */
+
 .container {
   text-align: center;
-  /* padding: 0 150px; */
   padding: auto;
   min-width: 100%;
   height: 100%;
   position: absolute;
   z-index: 1;
-  /* background: rgba(80, 81, 219, 0.4); */
-  /* background: rgba(0, 0, 0, 0.4); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -377,8 +260,6 @@ export default {
   margin: 0;
 }
 .container-inner {
-  /* max-width: 750px;*/
-  /* align-items: left; */
   min-width: 100%;
   text-align: left;
 }
@@ -593,13 +474,11 @@ export default {
   font-weight: normal;
   font-size: 4vmin;
   text-align: center;
-  /* line-height: 80px; */
 }
 .section-3 h3 {
   font-style: normal;
   font-weight: normal;
   font-size: 7vmin;
-  /* line-height: 57px; */
   text-align: center;
 }
 .reason-gra {
@@ -624,14 +503,10 @@ export default {
   margin-bottom: 10px;
 }
 .bg {
-  /* max-width: 222px; */
   padding: 50px;
   border: 5px solid white;
 }
 .bg img {
-  /* position: relative; */
-  /* animation: float 6s ease-in-out infinite; */
-  /* width: 100px; */
   height: 100px;
   margin: auto;
 }

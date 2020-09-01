@@ -136,24 +136,10 @@ a {
 .logo > img {
   height: 50px;
 }
-/* .link li a.login-link {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  color: #000000;
-}
-.link li a.login-link:hover {
-  border-bottom: 4px solid #360efc;
-  transition: all ease-in-out 200ms;
-} */
+
 .link > li > .router-link-exact-active {
   border-bottom: 4px solid #360efc;
 }
-/* a {
-  text-decoration: none;
-  cursor: pointer;
-} */
 button {
   cursor: pointer;
 }
@@ -164,19 +150,15 @@ button {
   font-size: 16px;
   line-height: 18px;
   letter-spacing: -0.4px;
-  /* color: #3887f6; */
   color: #5051DB;
   background: transparent;
-  /* border: 2px solid #3887F6; */
   box-sizing: border-box;
 }
 .login:hover {
-  /* color: #5051DB; */
   color: #3887f6;
   background: #ffffff;
   border-spacing: 2px solid #000000;
   transition: all ease-in-out 500ms;
-  /* border: 2px solid #5051DB */
 }
 .try {
   padding: 10px 30px;
@@ -185,36 +167,16 @@ button {
   font-size: 16px;
   line-height: 18px;
   letter-spacing: -0.4px;
-  /* color: #3887f6; */
   color: #5051DB;
   background: transparent;
-  /* border: 2px solid #3887F6; */
   box-sizing: border-box;
 }
 .try:hover {
-  /* color: #5051DB; */
   color: #3887f6;
   background: #ffffff;
   border-spacing: 2px solid #000000;
   transition: all ease-in-out 500ms;
-  /* border: 2px solid #5051DB */
 }
-/* .try {
-  padding: 10px 20px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-  letter-spacing: -0.4px;
-  color: #ffffff;
-  background: #3887f6;
-  border: 1px solid #3887f6;
-}
-.try:hover {
-  background: #5051db;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.55);
-  transition: all ease-in-out 500ms;
-} */
 .dropdown {
   overflow: hidden;
 }

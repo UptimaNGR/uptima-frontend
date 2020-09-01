@@ -106,13 +106,6 @@
                 </div>
                 <div class="form-section">
                   <p>Facility type</p>
-                  <!-- <input
-                                        :class="{ error: $v.itemData.facilityType.$error }"
-                                        type="text"
-                                        @input="$v.itemData.facilityType.$touch()"
-                                        placeholder="Full covered"
-                                        v-model.trim="itemData.facilityType"
-                                    /> -->
                   <v-select
                     :class="{ error: $v.itemData.facilityType.$error }"
                     class="inpt"
@@ -210,7 +203,6 @@
 </template>
 
 <script>
-// local registration
 import { mapActions } from 'vuex';
 
 import { FormWizard, TabContent } from 'vue-form-wizard';

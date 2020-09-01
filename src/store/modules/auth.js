@@ -2,7 +2,6 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import VueSession from 'vue-session';
 import api from '../../utils/api';
-// import router from '../../router';
 
 const options = {
   persist: true
@@ -66,7 +65,6 @@ const actions = {
           },
           { root: true }
         );
-        // console.log(error.response);
         return error;
       });
     return true;
