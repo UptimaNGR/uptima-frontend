@@ -66,9 +66,9 @@
 
 <script>
 export default {
-    data: () => ({
-        isOpen: false
-    })
+  data: () => ({
+    isOpen: false
+  })
 };
 </script>
 

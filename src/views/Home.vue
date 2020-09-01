@@ -1,134 +1,70 @@
 <template>
   <div id="Solution" class="font">
-    <Nav class="home-nav" />
-    <div>
-      <v-carousel :show-arrows="false" :height="650" :cycle="true">
-        <v-carousel-item class="solutions">
-          <div class="container">
-            <h3 class="heading">
-              THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
-            </h3>
-            <p>
-              Take charge of your fuel levels by exploring our innovative solutions
-              <br />for remote monitoring of fuel levels.
-            </p>
-            <div>
-              <router-link to="/contact-us"
-                ><button class="btn1">
-                  GET STARTED
-                </button></router-link
-              >
-              <router-link to="#"
-                ><button class="btn2 deep-blue-bg">
-                  GET A FREE DEMO
-                </button></router-link
-              >
-            </div>
-          </div>
-        </v-carousel-item>
-        <v-carousel-item class="solutions2">
-          <div class="container">
-            <h3 class="heading">
-              THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
-            </h3>
-            <p>
-              Take charge of your fuel levels by exploring our innovative solutions
-              <br />for remote monitoring of fuel levels.
-            </p>
-            <div>
-              <router-link to="/contact-us"
-                ><button class="btn1">
-                  GET STARTED
-                </button></router-link
-              >
-              <router-link to="#"
-                ><button class="btn2 deep-blue-bg">
-                  GET A FREE DEMO
-                </button></router-link
-              >
-            </div>
-          </div>
-        </v-carousel-item>
-        <v-carousel-item class="solutions3">
-          <div class="container">
-            <h3 class="heading">
-              THE LEADING PROVIDER OF FUEL REMOTE MONITORING SOLUTIONS
-            </h3>
-            <p>
-              Take charge of your fuel levels by exploring our innovative solutions
-              <br />for remote monitoring of fuel levels.
-            </p>
-            <div>
-              <router-link to="/contact-us"
-                ><button class="btn1">
-                  GET STARTED
-                </button></router-link
-              >
-              <router-link to="#"
-                ><button class="btn2 deep-blue-bg">
-                  GET A FREE DEMO
-                </button></router-link
-              >
-            </div>
-          </div>
-        </v-carousel-item>
-      </v-carousel>
-    </div>
-    <div class="about">
-      <h3>ABOUT US</h3>
-      <p>
-        Uptima is on a mission to help businesses in the oil and gas sector in Africa realize their
-        full potential through innovative software and hardware solutions. We are presently a
-        leading provider of hardware and on-demand cloud computing solutions for remote Monitoring
-        of tanks and tankers within the oil and gas industry.
-      </p>
-    </div>
-    <div class="sponsor light-blue-bg">
-      <img src="../assets/images/png/tech-crunch.png" alt="tech-crunch" />
-      <img src="../assets/images/png/guardian.png" alt="guardian" />
-      <img src="../assets/images/png/combination.png" alt="combination" />
-    </div>
-    <div class="reason">
-      <router-link to="contact-us"
-        ><button class="deep-blue">
-          TALK TO US
-        </button></router-link
-      >
-      <h3 class="offer">WHAT OUR SOLUTIONS OFFER</h3>
-      <div class="reason-gra">
-        <div class="light-blue-bg bg">
-          <img src="../assets/images/svg/oil.svg" alt="oil" />
-          <p>
-            With real-time visualization of the litres of fuel sold at each station on our clients’
-            dashboard, we provide automated visibility of the expected cash inflow thereby
-            preventing possible cash losses due to premeditated and inadvertent actions.
-          </p>
-        </div>
-        <div class="light-blue-bg bg">
-          <img src="../assets/images/svg/connect.svg" alt="connect" />
-          <p>
-            With our solution’s real time stock monitoring and forecasting, we help our clients
-            automate purchase planning and eliminate the risk of extreme shortages in fuel levels
-            during peak hours.
-          </p>
-        </div>
-        <div class="light-blue-bg bg">
-          <img src="../assets/images/svg/screen.svg" alt="screen" />
-          <p>
-            Our Telemetry cloud solution helps in reducing our clients’ logistics costs by at least
-            20% by providing order dates prediction, tank level consumption to the logistics
-            department so as to optimize delivery schedules.
-          </p>
-        </div>
-        <div class="light-blue-bg bg">
-          <img src="../assets/images/svg/charge.svg" alt="charge" />
-          <p>
-            Via our client’s personalized dashboards, various departments such as the accounting
-            department can easily see the exact fuel inventory at any time, on any day, with just 1
-            click, thereby improving budgeting planning.
-          </p>
+    <Nav class="home-nav" @video='showDemo'/>
+    <div class = "main-container">
+      <div class="top-hero"></div>
+      <div class="bottom-hero"></div>
+      <div class="container">
+        <div class = "container-inner">
+          <p>A BETTER  WAY TO SAVE COST AND TAKE CONTROL</p>
+          <h3>
+            Take Charge of Your Fuel Level
+          </h3>
+          <h3 class= "deep-blue-txt">and Save</h3>
         </div>
       </div>
+    </div>
+    <div v-scrollanimation class="section-2">
+      <div class="text-container">
+        <p class="deep-blue">01</p>
+        <h4 class="small-heading">EASILY ACCESSIBLE DATA</h4>
+        <p class="body-text">
+          Our solution transmits actionable data real time from tanks and tankers to the cloud. This
+          data can easily be shared via the internet amidst departments. All permitted staffs can easily see the exact inventory at any time, on any day which would enable them make better decisions.
+        </p>
+      </div>
+      <div class= "img-container">
+        <img src="../assets/images/png/analysis1.png" alt="analysis" />
+      </div>
+    </div>
+    <div v-scrollanimation class="section-2 reverse light-blue-bg">
+      <div class= "img-container">
+        <img src="../assets/images/png/graph1.svg" alt="graph" />
+      </div>
+      <div class="text-container">
+        <p class="deep-blue">02</p>
+        <h4 class="small-heading">REAL TIME OVERVIEW OF OPERATIONS</h4>
+        <p class="body-text">
+          Managers at filling stations are provided a hawk-eyed view of operations from anywhere
+          they are, thereby easily spotting red flags and preventing possible cash losses.
+        </p>
+      </div>
+    </div>
+    <div v-scrollanimation class="section-2 ">
+      <div class="text-container">
+        <p class="deep-blue">03</p>
+        <h4 class="small-heading">DETAILED REPORTS</h4>
+        <p class="body-text">
+          Our solution provides our customers with useful insight into historical data with visually appealing charts and graphs, presenting information in an easy-to-read single glance. Our solution also provides automated visibility of expected cash-inflow.
+        </p>
+      </div>
+      <div class= "img-container">
+        <img src="../assets/images/png/analysis2.jpg" alt="analysis" />
+      </div>
+    </div>
+    <div v-scrollanimation class="section-2 reverse light-blue-bg">
+      <div class= "img-container">
+        <img src="../assets/images/png/settings.png" alt="graph" />
+      </div>
+      <div class="text-container">
+        <p class="deep-blue">04</p>
+        <h4 class="small-heading">PERSONALIZED SETTINGS</h4>
+        <p class="body-text">
+          Managers at filling stations are allowed to make personalized settings such as different low-level notification for each of your facility, and set price of your product for better financial report and operational management.
+        </p>
+      </div>
+    </div>
+    <div class="reason">
     </div>
     <div class="images">
       <img src="../assets/images/png/pic1.png" alt="pic1" />
@@ -145,33 +81,61 @@
           wherever you are.
         </p>
       </div>
-      <div class="help-image">
-        <img src="../assets/images/png/stack.png" alt="stack" />
-        <div class="light-blue-bg">
-          <div class="grow">
-            <h3>WE HELP YOUR BUSINESS REALIZE ITS FULL POTENTIAL</h3>
-            <p>
-              Through detailed information and sufficient data, we want to make it easy for you to
-              manage your fuel levels and make informed decisions on on your fuel consumption rates
-            </p>
-            <router-link to="#"
-              >FIND OUT MORE
-              <svg
-                width="7"
-                height="12"
-                viewBox="0 0 7 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 11L6 6L1 1"
-                  stroke="#F9BC0A"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </router-link>
-          </div>
+    </div>
+    <div class="section-3" v-scrollanimation>
+      <div class="light-blue-bg cont">
+        <div>
+          <h3>90%</h3>
+          <h2>
+            Leakage <br />
+            proof
+          </h2>
+        </div>
+      </div>
+      <div class="deep-blue-bg shadow cont-mid">
+        <div>
+          <h3>97%</h3>
+          <h2>
+            Accuracy
+          </h2>
+        </div>
+      </div>
+      <div class="light-blue-bg cont">
+        <div>
+          <h3>89%</h3>
+          <h2>
+            Cost <br />
+            saving
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="reason">
+      <h3 class="heading">WHY CHOOSE UPTIMA</h3>
+      <div class="reason-gra">
+        <div class="light-blue-bg bg">
+          <img src="../assets/images/png/cloud2.png" alt="cloud" />
+          <p>
+            Our solutions are cloud based hence clients data can easily be accessed via the
+            internet, remotely providing our customers faster communication within the company's
+            hierarchical system, increased transparency and better operational efficiencies
+          </p>
+        </div>
+        <div class="light-blue-bg bg">
+          <img src="../assets/images/png/flexible.png" alt="connect" />
+          <p>
+            With our on-demand subscription based pricing structure, Uptima offers its clients
+            increased flexibility. Clients can easily choose a monthly payment plan and this affords
+            our clients the ability to easily stop and start as the need arises without worrying
+            much about sunk cost.
+          </p>
+        </div>
+        <div class="light-blue-bg bg">
+          <img src="../assets/images/png/logistics2.png" alt="screen" />
+          <p>
+            Uptima works with most major oil and gas companies who use our solutions to optimize
+            their logistics and offer a better service to their customers.
+          </p>
         </div>
       </div>
     </div>
@@ -180,7 +144,7 @@
       <h3>BE AHEAD. USE WHAT IT TAKES TO <br />GROW BIG</h3>
       <img src="../assets/images/png/filling.png" alt="filling" />
       <div class="light-blue-bg newsletter">
-        <h2 class="yellow">NEWSLETTER</h2>
+        <h2 class="deep-blue">NEWSLETTER</h2>
         <p>Stay in touch with latest updates from us. We promise we wouldn’t spam</p>
         <form class="form">
           <input type="text" placeholder="Name" />
@@ -191,38 +155,91 @@
         </form>
       </div>
     </div>
-    <Footer class="footer" /></div
-></template>
+    <Video v-show = 'watchDemo' @close='closeDemo' :key = 'watchDemo' :play = 'watchDemo'></Video>
+    <Footer class="footer" />
+  </div>
+</template>
 
 <script>
 import Nav from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
+import Video from '../components/VideoModal.vue';
 
 export default {
-    components: {
-        Nav,
-        Footer
+  components: {
+    Nav,
+    Footer,
+    Video
+  },
+  data() {
+    return {
+      watchDemo: false
+    };
+  },
+  methods: {
+    showDemo() {
+      this.watchDemo = true;
+    },
+    closeDemo() {
+      this.watchDemo = false;
     }
+  }
 };
 </script>
 
 <style scoped>
-.solutions {
-  background: url(../assets/images/png/tankker.png);
-  background-size: cover;
+.home-nav {
+  max-width: 100%;
 }
-.solutions2 {
-  background: url(../assets/images/png/tanker2.png);
-  background-size: cover;
+.main-container {
+  position: relative;
+  height: 650px;
 }
-.solutions3 {
-  background: url(../assets/images/png/tanker3.png);
+.main-container .top-hero, .main-container .bottom-hero {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
   background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition:  opacity 1s ease-in-out;
+  -o-transition:  opacity 1s ease-in-out;
+  transition:  opacity 1s ease-in-out;
 }
+.top-hero {
+  background: url(../assets/images/svg/Pipeline.svg);
+}
+.bottom-hero {
+  background: url(../assets/images/svg/Truck.svg);
+}
+.main-container .top-hero {
+  animation-name: imgFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-delay: 0s;
+}
+.main-container .bottom-hero {
+  animation-name: imgFadeInOutTwo;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-delay: 0s;
+}
+
 .container {
   text-align: center;
-  padding: 0 150px;
-  margin-top: 200px;
+  padding: auto;
+  min-width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container h3 {
   font-style: normal;
@@ -230,16 +247,24 @@ export default {
   font-size: 45px;
   line-height: 55px;
   letter-spacing: 1px;
-  color: #ffffff;
+  color: #000000;
   margin: 0;
 }
 .container p {
   font-style: normal;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 20px;
   line-height: 30px;
   letter-spacing: -0.4px;
-  color: #ffffff;
+  color: #000000;
+  margin: 0;
+}
+.container-inner {
+  min-width: 100%;
+  text-align: left;
+}
+.deep-blue-txt {
+  color: #5051db !important;
 }
 .btn1 {
   background: #3887f6;
@@ -279,28 +304,104 @@ export default {
   border: 2px solid #5051db;
   transition: all ease-in-out 500ms;
 }
-.about {
+.section-2 {
+  display: flex;
+  justify-content: space-between;
   padding: 50px 100px;
-  text-align: center;
+  align-items: center;
 }
-.about h3 {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 30px;
-  line-height: 75px;
-  text-align: center;
-  letter-spacing: 1px;
-  color: #817f7f;
-  margin: 0;
+.text-container {
+  max-width: 60%;
 }
-.about p {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 30px;
-  text-align: center;
-  letter-spacing: 1px;
-  color: #000000;
+.shadow {
+  box-shadow: 8px 10px 25px #c4c4c4, -7px -10px 20px rgba(196, 196, 196, 0.25);
+  color: white;
+}
+.cont {
+  margin: auto;
+  width: 30%;
+  height: 250px;
+  display: flex;
+  justify-items: center;
+}
+.cont div {
+  margin: auto;
+}
+.cont-mid {
+  margin: auto;
+  width: 30%;
+  height: 300px;
+  display: flex;
+  justify-items: center;
+}
+.cont-mid div {
+  margin: auto;
+}
+.section-3.before-enter .cont, .section-3.before-enter .cont-mid {
+  opacity: 0;
+  transition: all 4s ease-out;
+}
+.section-3.enter .cont, .section-3.enter .cont-mid {
+  opacity: 1;
+}
+.section-2 img {
+  transition: transform 0.4s;
+  max-width: 100%;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.section-2 img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.section-2 .img-container {
+  max-width: 40%;
+  padding: 20px;
+  align-content : center;
+  justify-content: center;
+  }
+.section-2 .text-container {
+  max-width: 60%;
+  padding: 15px;
+  align-content : center;
+  justify-content: center;
+}
+.section-2.before-enter {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s ease-out;
+}
+.section-2.enter {
+  opacity: 1;
+  transform: translateY(0px)
+}
+.before-enter p, .before-enter h4 {
+  opacity: 0;
+  transform: translateX(-150px);
+  transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+}
+.reverse.before-enter p, .reverse.before-enter h4 {
+  opacity: 0;
+  transform: translateX(150px);
+  transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+}
+.enter p, .enter h4 {
+  opacity: 1;
+  transform: translateX(0PX);
+}
+.reverse.enter p, .reverse.enter h4 {
+  opacity: 1;
+  transform: translateX(0PX);
+}
+.before-enter img {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 2s ease-out;
+}
+.enter img {
+  opacity: 1;
+  transform: scale(1)
 }
 .sponsor {
   display: flex;
@@ -350,13 +451,67 @@ export default {
 .bg {
   padding: 50px;
 }
+.bg p {
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+.section-3 {
+  padding: auto;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.section-3 h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4vmin;
+  text-align: center;
+}
+.section-3 h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 7vmin;
+  text-align: center;
+}
+.reason-gra {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.reason {
+  margin-top: 20px;
+  padding: 50px 100px;
+}
+.reason-gra > div {
+  padding: 20px;
+  display: block;
+  align-items: center;
+}
+.reason-gra > div >img {
+  display: block;
+  margin: auto !important;
+}
+.heading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.bg {
+  padding: 50px;
+  border: 5px solid white;
+}
 .bg img {
-  width: 100px;
   height: 100px;
-  position: relative;
-  animation: float 6s ease-in-out infinite;
+  margin: auto;
 }
 .bg p {
+  text-align: justify;
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -466,6 +621,58 @@ export default {
 .filling img {
   width: 100%;
 }
+.solutions button > svg {
+  margin-left: 20px;
+}
+.get-started {
+  text-align: center;
+  background: #f6faff;
+  padding: 100px 0;
+}
+.get-started p {
+  font-size: 18px;
+}
+.get-started button {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: -0.4px;
+  color: #ffffff;
+  border: 2px solid #1c17ff;
+
+  padding: 15px 40px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.get-started button:hover {
+  color: #1c17ff;
+  background: #ffffff;
+  border: 2px solid #1c17ff;
+  transition: all ease-in-out 500ms;
+}
+.filling hr {
+  height: 1px;
+  background-color: #5051db;
+  border: none;
+  width: 150px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.filling h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #817f7f;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.filling img {
+  width: 100%;
+}
 .form {
   display: flex;
   justify-content: space-between;
@@ -528,16 +735,34 @@ export default {
   border: 2px solid #5051db;
   transition: all ease-in-out 500ms;
 }
-.solutions button > svg {
-  margin-left: 20px;
-}
 .footer {
   margin-top: 100px;
 }
 @media screen and (max-width: 768px) {
+  * {
+    max-width: 100%;
+  }
+  .main-container {
+    height: 100vh;
+  }
+  .btn1 {
+    margin: 10px;
+  }
+  .btn2 {
+    margin: 10px;
+  }
+  .img-container {
+    min-width: 90%;
+    margin: 5px;
+  }
+  .text-container {
+    min-width: 90%;
+    margin: 5px;
+  }
   .container {
     padding: 10px;
-    margin-top: 50px;
+    position: absolute;
+    margin: auto;
   }
   .container h3 {
     font-size: 35px;
@@ -561,6 +786,9 @@ export default {
   }
   .reason-gra {
     grid-template-columns: auto;
+  }
+  .reason-gra > div {
+    padding: 10px;
   }
   .bg {
     max-width: none;
@@ -598,6 +826,48 @@ export default {
   .filling img {
     width: 100vw;
   }
+  .section-2 {
+    padding: 20px;
+    flex-direction: column-reverse;
+  }
+  .before-enter p, .before-enter h4 {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+  }
+  .reverse.before-enter p, .reverse.before-enter h4 {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+  }
+  .reverse {
+    flex-direction: column;
+  }
+  .section-2 img {
+    width: 100%;
+  }
+  .reason {
+    padding: 20px;
+  }
+  .reason h3 {
+    margin: 20px 0;
+  }
+  .reason-gra {
+    grid-template-columns: 1fr;
+  }
+  .get-started {
+    padding: 50px 20px;
+  }
+  .heading {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .filling h3 {
+    font-size: 20px;
+  }
+  .filling img {
+    width: 100vw;
+  }
   .newsletter {
     padding: 30px;
     margin-top: 0;
@@ -620,6 +890,34 @@ export default {
   }
   .footer {
     margin-top: 0;
+  }
+}
+@keyframes imgFadeInOut {
+  0% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes imgFadeInOutTwo {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>

@@ -1,24 +1,39 @@
 <template>
   <div id="nav">
     <div class="nav font">
-      <div class="logo">
-        <img src="../assets/images/png/normal-logo.png" alt="logo" />
-      </div>
-      <div class="routes">
-        <div class="links">
-          <ul class="link">
-            <li><router-link to="/">HOME</router-link></li>
-            <li><router-link to="#">ABOUT</router-link></li>
-            <li><router-link to="/solutions">SOLUTIONS</router-link></li>
-          </ul>
+      <a href="http://uptima.ng">
+        <div class="logo">
+          <img src="../assets/images/png/normal-logo.png" alt="logo"/>
         </div>
+      </a>
+      <div class="routes">
         <div class="buttons">
           <ul>
-            <li>
-              <router-link to="/login"><button class="login">Login</button></router-link>
+            <li v-if = "this.$route.path === '/contact-us'">
+              <router-link to="/"><button class="try">Home</button></router-link>
             </li>
             <li>
-              <router-link to="#"><button class="try">TRY FOR FREE</button></router-link>
+              <a class ="login-link" href="http://utrackdashboard.uptima.ng"><button class = "login">Login</button></a>
+            </li>
+            <li v-if = "this.$route.path !== '/contact-us'">
+              <router-link to="/contact-us"><button class="try">Contact Us</button></router-link>
+            </li>
+            <li class= "dropdown">
+              <button  class="try">
+                Proposal <v-icon color = "#5051DB">mdi-chevron-down</v-icon>
+              </button>
+              <div>
+                <ul class="dropdown-content">
+                  <li class="dropdown-items">
+                    <button class= "try"  @click.prevent="watchVideo()">Video</button>
+                  </li>
+                  <li  class="dropdown-items">
+                    <button class= "try"><a href="/pdf/Utrack.pdf" target="_blank">
+                  PDF
+                </a></button>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -26,9 +41,11 @@
     </div>
     <nav class="mobile-nav">
       <div class="mobile-nav-content">
-        <div class="icon-mob">
-          <img src="../assets/images/svg/icon-white.svg" alt="white-icon" />
-        </div>
+        <a href="http://uptima.ng">
+          <div class="icon-mob">
+            <img src="../assets/images/svg/icon-white.svg" alt="white-icon" />
+          </div>
+        </a>
         <div>
           <button
             class="navbar__button__mobile"
@@ -43,20 +60,27 @@
       </div>
       <div class="nav__mobile" :class="{ open: isOpen }">
         <ul class="m-0 list-unstyled nav__mobile__list">
-          <li class="nav__mobile__list__item" @click="isOpen = !isOpen">
-            <router-link class="nav__mobile__link" to="/">HOME</router-link>
+          <li v-if = "this.$route.path === '/contact-us'" class="nav__mobile__list__item" @click="isOpen = !isOpen">
+            <router-link class="nav__mobile__link" to="/">Home</router-link>
           </li>
           <li class="nav__mobile__list__item" @click="isOpen = !isOpen">
-            <router-link class="nav__mobile__link" to="#">ABOUT</router-link>
+            <a href="http://utrackdashboard.uptima.ng" class="nav__mobile__link login-link" to="/login">Login</a>
           </li>
-          <li class="nav__mobile__list__item" @click="isOpen = !isOpen">
-            <router-link class="nav__mobile__link" to="/solutions">SOLUTIONS</router-link>
+          <li v-if = "this.$route.path !== '/contact-us'" class="nav__mobile__list__item" @click="isOpen = !isOpen">
+            <router-link class="nav__mobile__link" to="/contact-us">Contact Us</router-link>
           </li>
-          <li class="nav__mobile__list__item" @click="isOpen = !isOpen">
-            <router-link class="nav__mobile__link" to="/login">LOGIN</router-link>
-          </li>
-          <li class="nav__mobile__list__item" @click="isOpen = !isOpen">
-            <router-link class="nav__mobile__link" to="#">TRY FOR FREE</router-link>
+          <hr>
+          <li class="nav__mobile__list__item">Proposal
+            <ul>
+              <li class="nav__mobile__list__item" @click='isOpen = !isOpen; watchVideo()'>
+                Video
+              </li>
+              <li class="nav__mobile__list__item" @click='isOpen = !isOpen'>
+                <a href="/pdf/Utrack.pdf" target="_blank">
+                  PDF
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -66,15 +90,26 @@
 
 <script>
 export default {
-    data: () => ({
-        isOpen: false
-    })
+  data: () => ({
+    isOpen: false
+  }),
+  methods: {
+    watchVideo() {
+      this.$emit('video');
+    }
+  }
 };
 </script>
 
 <style scoped>
 #nav {
   padding: 20px 100px;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  width: 100%;
+  max-width: 1440px;
+  background-color: #ffffff;
 }
 .nav {
   display: flex;
@@ -92,28 +127,18 @@ ul {
 }
 li {
   list-style: none;
-  margin-left: 40px;
+  margin-left: 20px;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 .logo > img {
   height: 50px;
 }
-.link li a {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  color: #000000;
-}
-.link li a:hover {
-  border-bottom: 4px solid #360efc;
-  transition: all ease-in-out 200ms;
-}
+
 .link > li > .router-link-exact-active {
   border-bottom: 4px solid #360efc;
-}
-a {
-  text-decoration: none;
-  cursor: pointer;
 }
 button {
   cursor: pointer;
@@ -125,32 +150,44 @@ button {
   font-size: 16px;
   line-height: 18px;
   letter-spacing: -0.4px;
-  color: #000000;
+  color: #5051DB;
   background: transparent;
-  border: 2px solid #f9bc0a;
   box-sizing: border-box;
 }
 .login:hover {
-  color: #f9bc0a;
+  color: #3887f6;
   background: #ffffff;
   border-spacing: 2px solid #000000;
   transition: all ease-in-out 500ms;
 }
 .try {
-  padding: 10px 20px;
+  padding: 10px 30px;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   letter-spacing: -0.4px;
-  color: #ffffff;
-  background: #3887f6;
-  border: 1px solid #3887f6;
+  color: #5051DB;
+  background: transparent;
+  box-sizing: border-box;
 }
 .try:hover {
-  background: #5051db;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.55);
+  color: #3887f6;
+  background: #ffffff;
+  border-spacing: 2px solid #000000;
   transition: all ease-in-out 500ms;
+}
+.dropdown {
+  overflow: hidden;
+}
+.dropdown-content {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  background-color: #ffffff;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 .nav__mobile {
   display: block;
@@ -177,7 +214,7 @@ button {
   }
   #nav {
     padding: 0;
-    background: #360efc;
+    background: rgba(80, 81, 219, 1);
   }
   .mobile-nav {
     display: block;
