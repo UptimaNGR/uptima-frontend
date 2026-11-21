@@ -13,7 +13,7 @@
     "axios": "0.21.1",
     "core-js": "3.6.5",
     "serialize-javascript": "4.0.0",
-    "vue": "2.6.11",
+    "vue": "3.0.0",
     "vue-backtotop": "1.6.1",
     "vue-form-wizard": "0.8.4",
     "vue-pdf": "4.1.0",
